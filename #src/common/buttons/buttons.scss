@@ -1,0 +1,33 @@
+.btn-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    min-height: 2.875em;
+    border: 1px solid currentColor;
+    padding: 0.4em 0.75em;
+    line-height: 1.2em;
+    transition: all .3s ease;
+
+    &--light {
+        color: #fff;
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $secondColor;
+            }
+        }
+    }
+
+    &--dark {
+        background-color: $mainColor;
+        color: #fff !important;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $secondColor;
+            }
+        }
+    }
+}

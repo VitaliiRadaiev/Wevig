@@ -1,0 +1,206 @@
+.footer {
+    background: $mainColor;
+    color: #fff;
+    padding-top: 8rem;
+
+    &__row-1 {
+        margin-bottom: 6rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 4rem;
+        }
+        & .footer__body {
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            justify-content: space-between;
+
+            @media (max-width: $md3+px) {
+                display: block;
+
+                & .footer__col {
+                    &:not(:first-child) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__row-2 {
+        margin-bottom: 8.4rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 4.4rem;
+        }
+        & .footer__body {
+            display: flex;
+            justify-content: flex-end;
+
+            @media (max-width: $md3+px) {
+                justify-content: center;
+            }
+        }
+    }
+
+    &__row-3 {
+        background-color: #215077;
+        & .footer__body {
+            display: flex;
+            min-height: 6rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: $md3+px) {
+                flex-direction: column-reverse;
+                align-items: center;
+                padding-top: 3rem;
+                gap: 3rem;
+            }
+        }
+    }
+
+    &__body {
+        font-size: 1.8rem;
+        line-height: 1.88em;
+
+        & a {
+            opacity: 1 !important;
+            transition: all .3s ease;
+            &:hover {
+                color: $secondColor;
+            }
+        }
+    }
+
+    &__col {
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 26rem;
+
+        @media (max-width: $md3+px) {
+            max-width: 16.6rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        & a {
+            @media (min-width: 992px) {
+                &:hover {
+                    opacity: 0.7 !important;
+                }
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__contact {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        & > li {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        & a {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            & img {
+                flex: 0 0 auto;
+                width: 2.8rem;
+                height: 2.5rem;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    &__nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        & > li {
+            list-style: none;
+        }
+    }
+
+    &__btn {
+        &.btn-default {
+            border-color: $secondColor;
+            font-size: 2rem;
+            padding: 0.4em 1em;
+        }
+    }
+
+    &__social {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        gap: 2.4rem;
+
+        & > li {
+            flex: 0 0 auto;
+
+        }
+
+        & a {
+            & img, & svg {
+                width: 3.6rem;
+                height: auto;
+
+                @media (max-width: $md3+px) {
+                    width: 4rem;
+                }
+            }
+
+            & svg path {
+                transition: all .3s ease;
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & svg path {
+                        &[fill="#fff"] {
+                            fill: $secondColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    &__copy {
+    }
+
+    &__bottom-nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        & > li {
+            &:not(:last-child) {
+                &:after {
+                    content: '|';
+                    margin-left: 0.7rem;
+                }
+            }
+        }
+
+
+    }
+}
