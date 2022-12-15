@@ -77,8 +77,7 @@
 			}
 		}
 	</style>
-	
-<script src="js/vendors.js"></script>
+	<script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
 <!-- <script
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
@@ -211,16 +210,24 @@ defer
 		<!-- == // TOP LINE ================== -->
 
 		<main class="_page home-page">
-			<section class="promo-header">
-				<div class="promo-header__bg ibg">
-					<img src="img/photo/promo-header-bg@1.5x.jpg" alt="">
-				</div>
-				<div class="promo-header__body container">
-					<h1 class="promo-header__title">Ihr Spezialist im Wohnungseigentum</h1>
-					<div class="promo-header__subtitle">Die Hausverwaltung mit mehr als 60 Jahren Erfahrung und
-						umfassender Expertise für Ihre aktuellen Bedürfnisse</div>
-				</div>
-			</section>
+			<section class="promo-header" data-promo-header data-parallax>
+    <div class="promo-header__bg">
+        <div class="promo-header__bg-layer promo-header__bg-layer--1 layer" data-depth="0.20">
+            <img src="img/photo/bg-layer-1.png" alt="">
+        </div>
+        <div class="promo-header__bg-layer promo-header__bg-layer--2 layer" data-depth="0.15">
+            <img src="img/photo/bg-layer-2.png" alt="">
+        </div>
+        <div class="promo-header__bg-layer promo-header__bg-layer--3 layer" data-depth="0.10">
+            <img src="img/photo/bg-layer-3.png" alt="">
+        </div>
+    </div>
+    <div class="promo-header__body container" >
+        <h1 class="promo-header__title">Ihr Spezialist im Wohnungseigentum</h1>
+        <div class="promo-header__subtitle">Die Hausverwaltung mit mehr als 60 Jahren Erfahrung und
+            umfassender Expertise für Ihre aktuellen Bedürfnisse</div>
+    </div>
+</section>
 			<div class="p-130"></div>
 			<section class="current-posts" data-current-posts>
     <div class="current-posts__inner">
@@ -526,7 +533,6 @@ defer
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/jQueryScripts.min.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 </body>
 
 </html>

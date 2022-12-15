@@ -34,6 +34,7 @@ class App {
 			this.spollerInit();
 			this.componentsBeforeLoad();
 			this.slidersInit();
+			this.parallaxInit();
 		});
 		
 
@@ -252,6 +253,16 @@ class App {
 		}
 	}
 
+	parallaxInit() {
+		let parallaxContainers = document.querySelectorAll('[data-parallax]');
+		if(parallaxContainers.length) {
+			parallaxContainers.forEach(parallaxContainer => {
+				new Parallax(parallaxContainer, {
+					selector: '.layer'
+				});
+			})
+		}
+	}
 
 	componentsBeforeLoad() {
 		@@include('../common/promo-header/promo-header.js');
