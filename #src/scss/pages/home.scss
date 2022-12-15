@@ -6,12 +6,16 @@
     }
     &__body {
         position: relative;
+
+        &.container-second {
+            max-width: 149rem !important;
+        }
     }
 
     &__box {
         position: relative;
         width: 60.95%;
-        padding: 8rem 8rem 8rem 0;
+        padding: 9.4rem 8rem 7.4rem 0;
 
         @media (max-width: $md3+px) {
             width: 100%;
@@ -34,7 +38,7 @@
         color: $thirdColor;
         font-size: 2.8rem;
         line-height: 1em;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     &__title {
@@ -46,7 +50,7 @@
         line-height: 1.63em;
         color: #707070;
         max-width: 51.6rem;
-        margin-bottom: 4rem;
+        margin-bottom: 3.4rem;
 
         @media (max-width: $md3+px) {
             max-width: none;
@@ -55,6 +59,13 @@
 
     &__btn {
         font-size: 2rem;
+
+        &.btn-default {
+            @media (min-width: 768px) {
+                min-height: 3.7em;
+                padding: 0.4em 1.65em;
+            }
+        }
     }
 
     &__img {
@@ -63,9 +74,9 @@
         align-items: center;
         position: absolute;
         max-height: 100%;
-        width: 55.41%;
+        width: 58.41%;
         bottom: 0;
-        right: 7.1%;
+        right: 5.4%;
 
         @media (max-width: $xl1+px) {
             right: 0;
@@ -90,33 +101,41 @@
 .home-downloads {
     background: $mainColor;
     padding-top: 13rem;
-    padding-bottom: 13rem;
+    padding-bottom: 9rem;
     color: #fff;
 
     &__body {
         display: flex;
-        gap: 80px;
+        gap: 13rem;
         min-width: 0;
         align-items: center;
 
         @media (max-width: $xl1+px) { 
             gap: 50px;
         }
+
+        &.container-second {
+            max-width: 169rem !important;
+        }
     }
 
     &__link-wrap {
         position: relative;
         min-height: 52.6rem;
-        width: 42.5rem;
+        width: 38rem;
         flex: 0 0 auto;
         z-index: 5;
 
+        @media (min-width: $md2+px) {
+            margin-bottom: 3rem;
+        }
+
         @media (max-width: $xl1+px) {
-            width: 34rem;
+            width: 32rem;
         }
 
         @media (max-width: $md1+px) {
-            width: 32rem;
+            width: 30rem;
         }
 
         @media (max-width: $md2+px) {
@@ -179,7 +198,7 @@
         flex-direction: column;
         
         @media (min-width: 768px) {
-            gap: 7rem;
+            gap: 5rem;
 
         }
 
@@ -256,7 +275,7 @@
         flex: 1 1 auto;
         
         @media (min-width: 768px) {
-            padding-top: 5rem;
+            padding-top: 5.4rem;
             border-top: 2px solid $secondColor;
 
         }
@@ -290,16 +309,23 @@
 }
 
 .home-logos {
-
+    &.padding-wrap {
+        padding-top: 20rem;
+        padding-bottom: 18rem;
+    }
     &__body {
         display: grid;
         grid-template-columns: repeat(4, auto);
-        gap: 8rem;
+        gap: 10rem;
         justify-content: center;
 
 
         @media (max-width: $md2+px) {
             grid-template-columns: repeat(2, auto);
+        }
+
+        &.container-second {
+            max-width: 158rem !important;
         }
     }
 

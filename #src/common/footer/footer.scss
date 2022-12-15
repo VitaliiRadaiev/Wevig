@@ -4,7 +4,7 @@
     padding-top: 8rem;
 
     &__row-1 {
-        margin-bottom: 6rem;
+        margin-bottom: 5rem;
 
         @media (max-width: $md3+px) {
             margin-bottom: 4rem;
@@ -14,6 +14,10 @@
             grid-template-columns: repeat(5,auto);
             justify-content: space-between;
 
+            @media (min-width: 1568px) {
+                padding-right: 12.5rem;
+            }
+
             @media (max-width: $md3+px) {
                 display: block;
 
@@ -22,6 +26,11 @@
                         display: none;
                     }
                 }
+            }
+
+
+            &.container-second {
+                max-width: 169rem !important;
             }
         }
     }
@@ -38,6 +47,14 @@
 
             @media (max-width: $md3+px) {
                 justify-content: center;
+            }
+
+            @media (min-width: 1568px) {
+                padding-right: 12.5rem;
+            }
+
+            &.container-second {
+                max-width: 169rem !important;
             }
         }
     }
@@ -58,6 +75,14 @@
                 padding-top: 3rem;
                 gap: 3rem;
             }
+
+            @media (min-width: 1568px) {
+                padding-right: 8rem;
+            }
+
+            &.container-second {
+                max-width: 160rem !important;
+            }
         }
     }
 
@@ -75,6 +100,21 @@
     }
 
     &__col {
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            @media (min-width: 992px) {
+                padding-top: 3.5rem;
+            }
+        }
+
+
+        &:last-child {
+            @media (min-width: 992px) {
+                padding-top: 3.3rem;
+            }
+        }
     }
 
     &__logo {
@@ -107,7 +147,7 @@
 
         & > li {
             &:not(:last-child) {
-                margin-bottom: 2rem;
+                margin-bottom: 2.7rem;
             }
         }
 
@@ -140,6 +180,11 @@
             border-color: $secondColor;
             font-size: 2rem;
             padding: 0.4em 1em;
+
+            @media (min-width: 768px) {
+                min-height: 3.7em;
+                padding: 0.4em 1.8em;
+            }
         }
     }
 
@@ -190,13 +235,13 @@
         margin-bottom: 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.4rem;
 
         & > li {
             &:not(:last-child) {
                 &:after {
                     content: '|';
-                    margin-left: 0.7rem;
+                    margin-left: 0.9rem;
                 }
             }
         }

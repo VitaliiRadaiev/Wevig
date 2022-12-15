@@ -6,38 +6,52 @@
     width: 100%;
     z-index: 47;
 
-    &.header--is-scroll, &.header--dark {
-        // & .header__body {
-        //     min-height: 8.9rem;
-        //     background-color: $mainColor;
-        //     font-size: 1.8rem;
-        // }
+    &.header--dark {
+        position: fixed;
+    }
 
-        // & .header__logo {
-        //     max-width: 12.7rem;
-        // }
+    &.header--dark, &.header--dark-scroll {
+        & .header__body {
+            min-height: 8.9rem;
+            background-color: $mainColor;
+            font-size: 1.8rem;
+        }
 
-        // & .menu__link {
-        //     &::before {
-        //         transform: translateY(calc(((8.9rem / 2)) * -1));
-        //     }
-        // }
+        & .header__logo {
+            max-width: 12.7rem;
+        }
 
-        // & ~ .mobile-menu {
-        //     & .mobile-menu__head {
-        //         min-height: 8.9rem;
-        //         background-color: $mainColor;
-        //         font-size: 1.8rem;
-        //     }
+        & .menu__link {
+            &::before {
+                transform: translateY(calc(((8.9rem / 2)) * -1));
+            }
+        }
 
-        //     & .mobile-menu__logo {
-        //         max-width: 12.7rem;
-        //     }
+        & ~ .mobile-menu {
+            & .mobile-menu__head {
+                min-height: 8.9rem;
+                background-color: $mainColor;
+                font-size: 1.8rem;
+            }
 
-        //     & .mobile-menu__body {
-        //         height: calc(100% - 8.9rem);
-        //     }
-        // }
+            & .mobile-menu__logo {
+                max-width: 12.7rem;
+            }
+
+            & .mobile-menu__body {
+                height: calc(100% - 8.9rem);
+            }
+        }
+    }
+
+    &.header--dark-scroll {
+        position: fixed;
+        transform: translateY(-100%);
+    }
+
+    &.header--is-scroll {
+        transition: all .3s ease;
+        transform: translateY(0%);
     }
 
     &__body {
@@ -45,11 +59,10 @@
         align-items: center;
         padding: 0 6rem;
         min-height: 14.16em;
-        gap: 1.66em;
+        gap: 1.96em;
         color: #fff;
         font-size: 2.4rem;
         line-height: 1.2em;
-        transition: all .3s ease;
 
         @media (max-width: 1567.98px) {
             font-size: 1.8rem;
@@ -66,7 +79,6 @@
     }
 
     &__logo {
-        transition: all .3s ease;
         width: 100%;
         max-width: 11.66em;
 
@@ -90,6 +102,9 @@
 
     &__btn {
         flex: 0 0 auto;
+        &.btn-default {
+            transition: all 0s ease;
+        }
 
         @media (max-width: $md3+px) {
             display: none;
@@ -112,14 +127,14 @@
 .menu {
     &__list {
         display: flex;
-        gap: 1.66em;
+        gap: 2.24em;
         padding-left: 0;
         margin-bottom: 0;
     }
 
     &__link {
         text-transform: uppercase;
-        transition: all 0.3s ease;
+        transition: all 0s ease;
         opacity: 1 !important;
         white-space: nowrap;
         position: relative;
@@ -127,7 +142,7 @@
         @media (min-width: 992px) {
             &:hover {
                 color: $secondColor;
-
+                transition: all 0.3s ease;
                 &:before {
                     opacity: 1;
                 }
@@ -325,7 +340,7 @@
 
     &__btn {
         font-size: 3.6rem;
-        border-color: $secondColor;
+        border-color: $secondColor !important;
     }
 }
 

@@ -2,7 +2,8 @@ let header = document.querySelector('[data-header]');
 
 if (header) {
     window.addEventListener('scroll', () => {
-        header.classList.toggle('header--is-scroll', window.pageYOffset > 50);
+        header.classList.toggle('header--dark-scroll', window.pageYOffset > 500);
+        header.classList.toggle('header--is-scroll', window.pageYOffset > 600);
     })
 }
 

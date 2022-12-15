@@ -1,7 +1,7 @@
 .current-posts {
 
     &__inner {
-        padding-top: 18rem;
+        padding-top: 19rem;
         padding-bottom: 18rem;
         background-color: $mainColor;
         color: #fff;
@@ -14,7 +14,7 @@
 
     &__body {
         display: flex;
-        gap: 80px;
+        gap: 94px;
         min-width: 0;
 
         @media (max-width: $xl1+px) { 
@@ -28,16 +28,16 @@
 
     &__side-link-wrap {
         position: relative;
-        width: 42.5rem;
+        width: 32rem;
         flex: 0 0 auto;
         z-index: 5;
 
         @media (max-width: $xl1+px) {
-            width: 34rem;
+            width: 32rem;
         }
 
         @media (max-width: $md1+px) {
-            width: 32rem;
+            width: 30rem;
         }
 
         @media (max-width: $md2+px) {
