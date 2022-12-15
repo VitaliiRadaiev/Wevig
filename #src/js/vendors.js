@@ -2,3 +2,4 @@
 @@include('plugins/inputmask.min.js')
 @@include('plugins/fancybox.min.js')
 @@include('plugins/parallax.js')
+@@include('plugins/anime.min.js')

@@ -1,43 +1,43 @@
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 47;
 
     &.header--is-scroll, &.header--dark {
-        & .header__body {
-            min-height: 8.9rem;
-            background-color: $mainColor;
-            font-size: 1.8rem;
-        }
+        // & .header__body {
+        //     min-height: 8.9rem;
+        //     background-color: $mainColor;
+        //     font-size: 1.8rem;
+        // }
 
-        & .header__logo {
-            max-width: 12.7rem;
-        }
+        // & .header__logo {
+        //     max-width: 12.7rem;
+        // }
 
-        & .menu__link {
-            &::before {
-                transform: translateY(calc(((8.9rem / 2)) * -1));
-            }
-        }
+        // & .menu__link {
+        //     &::before {
+        //         transform: translateY(calc(((8.9rem / 2)) * -1));
+        //     }
+        // }
 
-        & ~ .mobile-menu {
-            & .mobile-menu__head {
-                min-height: 8.9rem;
-                background-color: $mainColor;
-                font-size: 1.8rem;
-            }
+        // & ~ .mobile-menu {
+        //     & .mobile-menu__head {
+        //         min-height: 8.9rem;
+        //         background-color: $mainColor;
+        //         font-size: 1.8rem;
+        //     }
 
-            & .mobile-menu__logo {
-                max-width: 12.7rem;
-            }
+        //     & .mobile-menu__logo {
+        //         max-width: 12.7rem;
+        //     }
 
-            & .mobile-menu__body {
-                height: calc(100% - 8.9rem);
-            }
-        }
+        //     & .mobile-menu__body {
+        //         height: calc(100% - 8.9rem);
+        //     }
+        // }
     }
 
     &__body {
