@@ -16,10 +16,17 @@
         height: 1.75em;
     }
 
+    &--md {
+        font-size: 1.6rem;
+        min-height: 5.43em;
+        padding: 0.4em 3.75em;
+    }
+
 
 
     &--light {
         color: #fff;
+        opacity: 1 !important;
 
         @media (min-width: 992px) {
             &:hover {
@@ -32,6 +39,7 @@
     &--light-second {
         color: $secondColor;
         border-color: $secondColor;
+        opacity: 1 !important;
 
         @media (min-width: 992px) {
             &:hover {
@@ -45,7 +53,7 @@
     &--dark {
         background-color: $mainColor;
         color: #fff !important;
-
+        opacity: 1 !important;
         @media (min-width: 992px) {
             &:hover {
                 transition: all .3s ease;
