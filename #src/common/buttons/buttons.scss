@@ -9,6 +9,14 @@
     padding: 0.4em 0.75em;
     line-height: 1.2em;
     transition: all .3s ease;
+    gap: 1.66em;
+
+    & img, svg {
+        flex: 0 0 auto;
+        height: 1.75em;
+    }
+
+
 
     &--light {
         color: #fff;
@@ -17,6 +25,19 @@
             &:hover {
                 transition: all .3s ease;
                 color: $secondColor;
+            }
+        }
+    }
+
+    &--light-second {
+        color: $secondColor;
+        border-color: $secondColor;
+
+        @media (min-width: 992px) {
+            &:hover {
+                transition: all .3s ease;
+                color: #fff;
+                background: $mainColor;
             }
         }
     }

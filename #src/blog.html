@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Wevig"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        @@include('common/header/_header.html',{
+        "mod": "header--dark"
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page blog-page">
+            <div class="data-padding-top-header-size"></div>
+
+            <section class="blog">
+                <div class="blog__body">
+                    <div class="blog__title side-title-wrap">
+                        <div class="side-title-body container">
+                            <h2 class="side-title">
+                                <span>aktuelles</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <ul class="blog__list">
+                        <li>
+                            @@include('common/blog-list-row/_blog-list-row.html')
+                        </li>
+                        <li>
+                            @@include('common/blog-list-row/_blog-list-row.html')
+                        </li>
+                        <li>
+                            @@include('common/blog-list-row/_blog-list-row.html')
+                        </li>
+                    </ul>
+                    <div class="blog__bottom container">
+                        <a href="#" class="blog__btn btn-default btn-default--light-second">
+                            <img src="img/icons/arrow-clockwise.svg" alt="">
+                            weitere werden geladen
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

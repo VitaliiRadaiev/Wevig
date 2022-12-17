@@ -44,7 +44,7 @@
         }
     }
 
-    &.header--dark-scroll {
+    &.header--dark-scroll:not(.header--dark) {
         position: fixed;
         transform: translateY(-100%);
     }
