@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Wevig"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        @@include('common/header/_header.html',{
+        "mod": "header--dark"
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page team-page">
+            <div class="data-padding-top-header-size"></div>
+
+
+            <section class="team">
+                <div class="team__title side-title-wrap">
+                    <div class="side-title-body container">
+                        <h2 class="side-title">
+                            <span>team</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="team__head">
+                    <div class="team__head-body container">
+                        <a href="#" class="team__head-link">
+                            <img src="img/icons/search.svg" alt="">
+                            Suchen Sie Ihre HausverwalterIn?
+                        </a>
+                        <h2 class="team__head-title">
+                            Unsere MitarbeiterInnen sind für Sie da!
+                        </h2>
+                    </div>
+                </div>
+                <div class="team__list container">
+                    <div class="team-list" data-slider="team-list" data-mobile="false">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                @@for (var i = 0; i < 30; i++) { 
+                                <div class="swiper-slide">
+                                    <div class="team-card">
+                                        <div class="team-card__img ibg">
+                                            <a href="#">
+                                                <img src="img/photo/team-img.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="team-card__body">
+                                            <div class="team-card__position">Geschäftsführung</div>
+                                            <div class="team-card__name">
+                                                <a href="#">
+                                                    Mag. Bernhard Raffelsberger
+                                                </a>
+                                            </div>
+                                            <ul class="team-card__contact">
+                                                <li>
+                                                    <a href="#">
+                                                        Tel.: +43 1 486 06 08
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        Email: bernhard.raffelsberger@wevig.at
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="team-card__link">V-Card</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            }
+                        </div>
+
+                    </div>
+                    <div class="current-posts__slider-btn prev">
+                        <img src="img/icons/triangle-right-blue@2x.png" alt="">
+                    </div>
+                    <div class="current-posts__slider-btn next">
+                        <img src="img/icons/triangle-right-blue@2x.png" alt="">
+                    </div>
+                </div>
+    </div>
+    </section>
+
+    </main>
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    </div>
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

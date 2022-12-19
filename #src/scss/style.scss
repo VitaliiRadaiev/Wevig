@@ -37,11 +37,15 @@
 @import "../common/card/card";
 @import "../common/current-posts/current-posts";
 @import "../common/blog-list-row/blog-list-row";
+@import "../common/team-list/team-list";
+@import "../common/form/form";
 // ==== // COMMON BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
 @import "pages/blog";
 @import "pages/blog-single";
+@import "pages/team";
+@import "pages/administrator-search";
 // ==== AND PAGES =====================================================
 

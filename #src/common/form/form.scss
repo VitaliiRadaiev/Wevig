@@ -73,27 +73,31 @@
 .input {
     display: flex;
     align-items: center;
+    text-align: center;
     width: 100%;
-    background: rgba(40, 83, 143, 0.05);
-    border-radius: 0.8rem;
-    height: 4rem;
-    padding: 0.8rem 1.5rem;
-    border: 1px solid transparent;
+    background: #fff;
+    border-radius: 0;
+    height: 10.9rem;
+    padding: 0.8rem 3.6rem;
+    border: 1px solid $textColor;
     outline: none;
-    font-size: 1.4rem;
-    line-height: 1.58em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-
-    &:focus {
-        border-color: $secondColor;
-    }
+    font-size: 2.7rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: $textColor;
 
     &::placeholder {
-        font-size: 1.4rem;
         font-weight: 400;
-        letter-spacing: 0.05em;
+        color: $secondColor;
+        transition: all .3s ease;
     }
+
+    &:focus {
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+
 }
 .textarea {
     display: flex;
@@ -134,8 +138,8 @@
 
         &:checked ~ {
             & .checkbox-radio__square {
-                background-color: $active;
-                border-color: $active;
+                background-color: $mainColor;
+                border-color: $mainColor;
                 background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjk5OTk5OSA0LjYzNTg4TDIuNDc0NzEgNi4xMTA1OUMyLjg2NTIzIDYuNTAxMTEgMy40OTg0IDYuNTAxMTEgMy44ODg5MiA2LjExMDU5TDkgMC45OTk1MTIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==");
             }
         }

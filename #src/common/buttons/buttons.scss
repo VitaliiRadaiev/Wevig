@@ -54,10 +54,19 @@
         background-color: $mainColor;
         color: #fff !important;
         opacity: 1 !important;
+
+        & svg path {
+            transition: all .3s ease;
+        }
+
         @media (min-width: 992px) {
             &:hover {
                 transition: all .3s ease;
                 background-color: $secondColor;
+
+                & svg path {
+                    fill: #fff;
+                }
             }
         }
     }

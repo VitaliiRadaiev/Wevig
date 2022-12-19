@@ -59,6 +59,7 @@ class App {
 	slidersInit() {
 		@@include('../common/current-posts/current-posts.js');
 		@@include('../common/blog-list-row/blog-list-row.js');
+		@@include('../common/team-list/team-list.js');
 	}
 
 

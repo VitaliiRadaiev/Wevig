@@ -1,0 +1,147 @@
+.administrator-search {
+    padding-top: 5.6rem;
+    padding-bottom: 17.5rem;
+
+    @media (max-width: $md3+px) {
+        padding-bottom: 26.5rem;
+    }
+
+    & .team__title {
+        top: 9.9rem;
+    }
+
+    & .side-title  {
+        @media (min-width: 1920px) {
+            width: 11rem;
+        }
+        @media (max-width: $md3+px) {
+            width: 14rem;
+            line-height: 1.2em;
+        }
+        & span {
+            text-align: left;
+
+            @media (max-width: $md3+px) {
+                right: 8.2rem;
+            }
+        }
+    }
+
+    & .team__head {
+        margin-bottom: 11rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 16.3rem;
+        }
+        &::before {
+            width: calc(100% - 5.7rem);
+        }
+    }
+
+    & .team__head-body {
+        min-height: 51.8rem;
+        padding-bottom: 6.9rem;
+        padding-left: 15.2rem;
+
+        @media (max-width: $md3+px) {
+            padding-left: 17.2rem;
+            padding-top: 19rem;
+            padding-bottom: 12.9rem;
+        }
+
+        &.container {
+            max-width: 169rem !important;
+        }
+    }
+
+    & .team__head-title {
+        margin-top: auto;
+        margin-bottom: 2.2rem;
+
+        @media (max-width: $md3+px) {
+            font-size: 4.4rem;
+            margin-left: 1rem;
+            margin-bottom: 8rem;
+        }
+    }
+
+    & .team__head-subtitle {
+        font-size: 2.7rem;
+        font-weight: 300;
+        line-height: 5.4rem;
+    }
+
+
+
+    &__body {
+        display: flex;
+        gap: 8rem;
+
+        @media (max-width: $md3+px) {
+            display: block;
+            padding: 0 7rem;
+        }
+
+        &.container-second {
+            max-width: 151rem !important;
+        }
+    }
+
+    &__col-1 {
+        width: 100%;
+        max-width: 57.1rem;
+
+        @media (max-width: $md3+px) {
+            max-width: none;
+            margin-bottom: 17.5rem;
+        }
+    }
+
+    &__col-2 {
+        width: 100%;
+        max-width: 45.4rem;
+        margin-left: 15%;
+
+        @media (max-width: $md1+px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 6.5rem;
+        margin-bottom: 6.5rem;
+    }
+
+    &__field {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 7.2rem);
+            height: 1px;
+            z-index: 2;
+            border-bottom: 2px dotted $secondColor;
+        }
+    }
+
+    &__bottom {
+    }
+
+    &__btn {
+        &.btn-default {
+            width: 100%;
+            min-height: 10.7rem;
+            text-transform: uppercase;
+            font-size: 2.7rem;
+            font-weight: 300;
+            line-height: 1.2em;
+        }
+    }
+}
