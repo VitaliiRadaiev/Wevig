@@ -96,6 +96,89 @@
             height: auto;
         }
     }
+
+    &--second {
+        padding-top: 15rem;
+        padding-bottom: 0;
+
+        @media (min-width: 768px) {
+            & .home-banner__body  {
+                padding-bottom: 12.3rem;
+    
+                &.container-second {
+                    max-width: 167rem !important;
+                }
+            }
+    
+            & .home-banner__box {
+                padding: 9.9rem 9.4rem 6rem 9.4rem;
+                width: 51.95%;
+    
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+    
+            & .home-banner__suptitle {
+                margin-bottom: 2.2rem;
+            }
+    
+            & .home-banner__text {
+                max-width: 58.6rem;
+                margin-bottom: 5.2rem;
+            }
+    
+            & .home-banner__img {
+                width: 49.41%;
+                right: 4.4%;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            padding-top: 14rem;
+
+            & .home-banner__body  {
+                &.container-second {
+                    width: calc(100% - 13.2rem);
+                }
+            }
+
+            & .home-banner__box {
+                padding: 7.7rem 3rem 10rem 0.5rem;
+            }
+
+            & .home-banner__suptitle {
+                font-size: 2.4rem;
+                margin-bottom: 0.5rem;
+            }
+
+            & .home-banner__title {
+                font-size: 4.4rem;
+                line-height: 6.6rem;
+                margin-bottom: 1.8rem;
+            }
+
+            & .home-banner__text {
+                max-width: 54rem;
+                margin-bottom: 3rem;
+            }
+
+            & .home-banner__btn {
+                &.btn-default {
+                    min-height: 3.7em;
+                    padding: 0.4em 1.75em;
+                }
+            }
+
+            & .home-banner__img {
+                width: 89%;
+            }
+        }
+
+    }
 }
 
 .home-downloads {

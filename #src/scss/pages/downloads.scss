@@ -1,0 +1,123 @@
+.downloads {
+    position: relative;
+    padding: 5.5rem 0 7.3rem;
+
+    @media (max-width: $md3+px) {
+        padding: 4.9rem 0 17.3rem;
+    }
+
+    &__title {
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        width: 100%;
+
+        @media (max-width: $md3+px) {
+            top: 9.5rem;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        padding: 17.5rem 12rem 8rem;
+        
+        @media (min-width: 768px) {
+            background-color: $mainColor;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 17.5rem 8rem 9rem 16.3rem;
+        }
+
+        &.container {
+            width: calc(100% - 12rem);
+            max-width: 171rem !important;
+
+            @media (max-width: $md3+px) {
+                width: 100%;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: calc(100% - 6.8rem);
+                    background-color: $mainColor;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        width: 100%;
+        max-width: 121.7rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__list {
+        margin-bottom: 21rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 15rem;
+        }
+
+        & .home-downloads__list-item {
+            max-width: none;
+            align-items: initial;
+        }
+
+        & .home-downloads__list-text-wrap {
+            padding-top: 0;
+            border: none;
+        }
+
+        & .home-downloads__list-title {
+            display: inline-block;
+            padding-top: 5.4rem;
+            border-top: 2px solid $secondColor;
+
+            @media (max-width: $md3+px) {
+                display: block;
+                margin-bottom: 2.2rem;
+            }
+        }
+
+        & .home-downloads__list-icon {
+            height: 100%;
+            transform: translateY(5rem);
+        }
+
+        & .home-downloads__list-text {
+            @media (max-width: $md3+px) {
+                display: block;
+            }
+        }
+
+        & > li {
+            padding-top: 0 !important;
+
+            &:not(:last-child) {
+                margin-bottom: 8.4rem;
+
+                @media (max-width: $md3+px) {
+                    padding-bottom: 0;
+                    margin-bottom: 4rem;
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+    }
+}
