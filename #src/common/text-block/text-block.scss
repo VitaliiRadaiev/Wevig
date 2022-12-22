@@ -1,5 +1,6 @@
 .text-block {
     display: flex;
+    gap: 3rem;
 
     @media (max-width: $md3+px) {
         display: block;
@@ -51,6 +52,45 @@
         & img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    &__img {
+        margin-top: auto;
+        width: 100%;
+        max-width: 41.6rem;
+        background-color: $mainColor;
+        margin-left: auto;
+
+        @media (max-width: $md3+px) {
+            max-width: 24.6rem;
+        }
+
+        &-inner {
+            position: relative;
+            height: 0;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        & img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            transform: rotate(-5deg);
+        }
+    }
+
+    &--has-img {
+        & .text-block__col-1 {
+            @media (min-width: 768px) {
+                padding-bottom: 14.5rem;
+            }
+            @media (max-width: $md3+px) {
+                margin-bottom: 2rem;
+            }
         }
     }
 }

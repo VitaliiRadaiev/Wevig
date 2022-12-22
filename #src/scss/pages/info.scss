@@ -1,0 +1,94 @@
+.info {
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+
+    &__title {
+        position: absolute;
+        top: 11rem;
+        left: 0;
+        width: 100%;
+
+        @media (max-width: $md3+px) {
+            top: 10rem;
+        }
+
+        & .side-title {
+            height: 41.5rem;
+
+            @media (max-width: $md3+px) {
+                width: 9rem;
+            }
+        }
+    }
+
+    &__content {
+        padding-left: 12rem;
+        padding-right: 12rem;
+        padding-top: 33.8rem;
+
+        @media (max-width: $md3+px) {
+            padding-top: 34.8rem;
+            padding-left: 10.2rem;
+            padding-right: 5rem;
+        }
+        &.container-second {
+            max-width: 133.3rem !important;
+        }
+    }
+
+    &__text {
+        color: $mainColor;
+        &.text-content {
+            font-size: 2.6rem;
+            line-height: 4.8rem;
+            & h2 {
+                margin-bottom: 6rem;
+
+                @media (max-width: $md3+px) {
+                    font-size: 4.4rem;
+                    line-height: 8rem;
+                    margin-bottom: 5rem;
+                }
+            }
+
+            & p,
+            & ul,
+            & ol,
+            & figure {
+                margin-bottom: 2em;
+            }
+
+            & p,
+            & ul,
+            & ol,
+            & figure,
+            & h1,
+            & h2,
+            & h3,
+            & h4,
+            & h5,
+            & h6 {
+                & ~ h1,
+                & ~ h2,
+                & ~ h3,
+                & ~ h4,
+                & ~ h5,
+                & ~ h6 {
+                    margin-top: 10rem;
+                }
+            }
+        }
+    }
+
+
+    &__logo {
+        margin-bottom: 2em;
+
+        & img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+    }
+}

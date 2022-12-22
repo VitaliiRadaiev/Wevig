@@ -1,0 +1,103 @@
+.about {
+    position: relative;
+    padding-top: 6rem;
+
+    &__title {
+        position: absolute;
+        top: 11rem;
+        left: 0;
+        width: 100%;
+
+        @media (max-width: $md3+px) {
+            top: 5rem;
+
+            & .side-title {
+                width: 7rem;
+            }
+
+            & span {
+                right: 4.5rem;
+            }
+        }
+    }
+
+    &__head {
+        padding-left: 14rem;
+        padding-right: 4rem;
+        padding-top: 20.5rem;
+        margin-bottom: 12.7rem;
+
+        @media (max-width: $md3+px) {
+            padding: 8rem 8rem 0 10.7rem;
+            margin-bottom: 6.2rem;
+        }
+
+        @media (max-width: $md4+px) {
+            padding-right: 6rem;
+        }
+        &.container {
+            max-width: 154.5rem !important;
+        }
+
+        & .text-block__text {
+            & h2 {
+                margin-bottom: 9.5rem;
+
+                @media (max-width: $md3+px) {
+                    font-size: 4.4rem;
+                    line-height: 5.6rem;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+
+        & .text-block__col-1 {
+            flex: 0 0 56.68%;
+        }
+    }
+
+    &__quote {
+        background-color: $mainColor;
+    }
+
+    &__quote-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 13rem;
+        padding-bottom: 7rem;
+        // justify-content: center;
+        text-align: center;
+        min-height: 62.2rem;
+        color: #fff;
+
+        @media (max-width: $md3+px) {
+            min-height: 60rem;
+        }
+    }
+
+    &__quote-text {
+        width: 100%;
+        max-width: 131.1rem;
+        margin: 0 auto 4rem;
+        font-size: 4rem;
+        line-height: 1.7em;
+
+        @media (max-width: $md3+px) {
+            max-width: 56rem;
+            font-size: 3rem;
+            line-height: 2.3em;
+        }
+
+    }
+
+    &__quote-logo {
+        width: 100%;
+        max-width: 11.4rem;
+        margin: 0 auto;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -118,16 +118,19 @@
     &__field {
         position: relative;
 
-        &:before {
-            position: absolute;
-            content: '';
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 7.2rem);
-            height: 1px;
-            z-index: 2;
-            border-bottom: 2px dotted $secondColor;
+        &:not(.not-line) {
+
+            &:before {
+                position: absolute;
+                content: '';
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100% - 7.2rem);
+                height: 1px;
+                z-index: 2;
+                border-bottom: 2px dotted $secondColor;
+            }
         }
     }
 

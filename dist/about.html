@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wevig</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        <header class="header header--dark" data-header data-popup="add-right-padding">
+    <div class="header__body">
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="">
+            </a>
+        </div>
+        <nav class="header__menu menu">
+            <ul class="menu__list">
+                <li>
+                    <a class="menu__link" href="#">
+                        über uns
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="#">
+                        leistungen
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="#">
+                        team
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="#">
+                        aktuelles
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="#">
+                        downloads
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="#">
+                        kontakte
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="header__btn btn-default btn-default--light">
+            MyWEVIG Portal
+        </a>
+        <button class="header__burger burger" data-action="mobile-menu-open">
+            <span class="burger__cross"></span>
+            <span class="burger__cross"></span>
+            <span class="burger__cross"></span>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+    <div class="mobile-menu__head">
+        <div class="mobile-menu__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="">
+            </a>
+        </div>
+        <button class="mobile-menu__close" data-action="mobile-menu-close"></button>
+    </div>
+    <div class="mobile-menu__body">
+        <ul class="mobile-menu__nav">
+            <li>
+                <a class="mobile-menu__link" href="#">
+                    über uns
+                </a>
+            </li>
+            <li>
+                <a class="mobile-menu__link" href="#">
+                    leistungen
+                </a>
+            </li>
+            <li>
+                <a class="mobile-menu__link" href="#">
+                    team
+                </a>
+            </li>
+            <li>
+                <a class="mobile-menu__link" href="#">
+                    aktuelles
+                </a>
+            </li>
+            <li>
+                <a class="mobile-menu__link" href="#">
+                    downloads
+                </a>
+            </li>
+            <li>
+                <a class="mobile-menu__link" href="#">
+                    kontakte
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="mobile-menu__btn btn-default">MyWEVIG Portal</a>
+    </div>
+</div>
+
+<div class="side-contacts">
+    <a  href="#" class="side-contacts__item">
+        <div class="side-contacts__icon">
+            <img class="img-svg" src="img/icons/phone-line.svg" alt="">
+        </div>
+        <div class="side-contacts__text">WEVIG Telefon</div>
+    </a>
+    <a  href="#" class="side-contacts__item">
+        <div class="side-contacts__icon">
+            <img class="img-svg" src="img/icons/mail.svg" alt="">
+        </div>
+        <div class="side-contacts__text">WEVIG E-Mail</div>
+    </a>
+    <a  href="#" class="side-contacts__item">
+        <div class="side-contacts__icon">
+            <img class="img-svg" src="img/icons/phone-plus.svg" alt="">
+        </div>
+        <div class="side-contacts__text">WEVIG Notruf</div>
+    </a>
+</div>
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page about-page">
+            <div class="data-padding-top-header-size"></div>
+
+            <section class="about">
+                <div class="about__title side-title-wrap">
+                    <div class="side-title-body container">
+                        <h2 class="side-title">
+                            <span>
+                                über uns
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="about__head container">
+                    <div class="text-block text-block--has-img">
+                        <div class="text-block__col-1">
+                            <div class="text-block__text text-content">
+                                <h2>Ihr Spezialist im Wohnungseigentum</h2>
+                                <p>
+                                    1958 wurde die „Wohnungseigentums-Verwaltungsgesellschaft“ gegründet, die sich
+                                    später zur WEVIG entwickelte. Heute gehört die WEVIG zu den größten gewerblichen
+                                    Wohnungseigentumsverwaltungen Österreichs.
+                                </p>
+                                <p>
+                                    Unsere Expertise liegt im Wohnungseigentum. Über 30 hochqualifizierte
+                                    MitarbeiterInnen setzen diese täglich dafür ein, die aktuellen Bedürfnisse unserer
+                                    KundInnen optimal zu erfüllen. Modernste Software unterstützt uns dabei.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-block__col-2">
+                            <div class="text-block__img">
+                                <div class="text-block__img-inner ibg">
+                                    <img src="img/photo/article-img-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__quote">
+                    <div class="about__quote-content container">
+                        <div class="about__quote-text">
+                            „Unser größtes Anliegen ist unseren Kunden unbürokratisch, flexibel und maßgeschneidert die
+                            optimale Dienstleistung zu erbringen.“
+                        </div>
+                        <div class="about__quote-logo">
+                            <img src="img/logo/logo-white.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-logos padding-wrap">
+                <div class="home-logos__body container-second">
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-1.png" alt="">
+                    </a>
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-2.png" alt="">
+                    </a>
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-3.png" alt="">
+                    </a>
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-4.png" alt="">
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- == FOOTER ================== -->
+        <footer class="footer">
+    <div class="footer__row-1">
+        <div class="footer__body container-second">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#">
+                        <img src="img/logo/logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__contact">
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/footer-phone.svg" alt="">
+                            +43-1-486 06 08
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/mail_icon.svg" alt="">
+                            office@wevig.at
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__nav">
+                    <li>
+                        <a href="#">
+                            über uns
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">leistungen</a>
+                    </li>
+                    <li>
+                        <a href="#">team</a>
+                    </li>
+                    <li>
+                        <a href="#">kontakte</a>
+                    </li>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__nav">
+                    <li>
+                        <a href="#">
+                            aktuelles
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            downloads
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <div class="footer__col">
+                <a href="#" class="footer__btn btn-default btn-default--light">MyWEVIG Portal   </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__row-2">
+        <div class="footer__body container-second">
+            <ul class="footer__social">
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/xing.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/linkedin.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__row-3">
+        <div class="footer__body container-second">
+            <div class="footer__copy">
+                © 2022 WEVIG GmbH
+            </div>
+            <ul class="footer__bottom-nav">
+                <li>
+                    <a href="#">
+                        AGB  
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Datenschutz</a>
+                </li>
+                <li>
+                    <a href="#">Impressum</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+        <!-- == // FOOTER ================== -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

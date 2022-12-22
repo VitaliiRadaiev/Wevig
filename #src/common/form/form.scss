@@ -102,26 +102,30 @@
 .textarea {
     display: flex;
     align-items: center;
+    text-align: center;
     width: 100%;
-    background: rgba(40, 83, 143, 0.05);
-    border-radius: 0.8rem;
-    height: 10rem;
-    padding: 0.8rem 1.5rem;
-    border: 1px solid transparent;
+    background: #fff;
+    border-radius: 0;
+    height: 27.4rem;
+    padding: 3.8rem 3.6rem;
+    border: 1px solid $textColor;
     outline: none;
-    font-size: 1.4rem;
-    line-height: 1.58em;
-    letter-spacing: 0.05em;
-    font-weight: 400;
-
-    &:focus {
-        border-color: $secondColor;
-    }
+    font-size: 2.7rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: $textColor;
+    resize: none;
 
     &::placeholder {
-        font-size: 14px;
         font-weight: 400;
-        letter-spacing: 0.05em;
+        color: $secondColor;
+        transition: all .3s ease;
+    }
+
+    &:focus {
+        &::placeholder {
+            opacity: 0;
+        }
     }
 }
 
@@ -129,6 +133,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
     & input {
         position: absolute;
@@ -147,18 +152,41 @@
 
     &__square {
         flex: 0 0 auto;
-        height: 1.2rem;
-        width: 1.2rem;
+        height: 4.4rem;
+        width: 4.4rem;
         border: 1px solid $mainColor;
-        margin-right: 1rem;
+        margin-right: 3.6rem;
         background-position: center;
         background-size: 85%;
         background-repeat: no-repeat;
+
+        @media (max-width: $md3+px) {
+            margin-right: 2rem;
+        }
     }
 
     &__text {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.5em;
+        font-size: 2.7rem;
+        line-height: 1.2em;
+        color: $mainColor;
+        font-weight: 300;
+        text-align: left;
+
+
+        & a {
+            color: $secondColor;
+            position: relative;
+            display: inline-block;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0.2em;
+                width: 100%;
+                height: 1px;
+                border-bottom: 1.5px dashed currentColor;
+            }
+        }
     }
 }

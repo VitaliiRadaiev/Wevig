@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Wevig"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        @@include('common/header/_header.html',{
+        "mod": "header--dark"
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page about-page">
+            <div class="data-padding-top-header-size"></div>
+
+            <section class="about">
+                <div class="about__title side-title-wrap">
+                    <div class="side-title-body container">
+                        <h2 class="side-title">
+                            <span>
+                                über uns
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="about__head container">
+                    <div class="text-block text-block--has-img">
+                        <div class="text-block__col-1">
+                            <div class="text-block__text text-content">
+                                <h2>Ihr Spezialist im Wohnungseigentum</h2>
+                                <p>
+                                    1958 wurde die „Wohnungseigentums-Verwaltungsgesellschaft“ gegründet, die sich
+                                    später zur WEVIG entwickelte. Heute gehört die WEVIG zu den größten gewerblichen
+                                    Wohnungseigentumsverwaltungen Österreichs.
+                                </p>
+                                <p>
+                                    Unsere Expertise liegt im Wohnungseigentum. Über 30 hochqualifizierte
+                                    MitarbeiterInnen setzen diese täglich dafür ein, die aktuellen Bedürfnisse unserer
+                                    KundInnen optimal zu erfüllen. Modernste Software unterstützt uns dabei.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-block__col-2">
+                            <div class="text-block__img">
+                                <div class="text-block__img-inner ibg">
+                                    <img src="img/photo/article-img-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__quote">
+                    <div class="about__quote-content container">
+                        <div class="about__quote-text">
+                            „Unser größtes Anliegen ist unseren Kunden unbürokratisch, flexibel und maßgeschneidert die
+                            optimale Dienstleistung zu erbringen.“
+                        </div>
+                        <div class="about__quote-logo">
+                            <img src="img/logo/logo-white.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-logos padding-wrap">
+                <div class="home-logos__body container-second">
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-1.png" alt="">
+                    </a>
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-2.png" alt="">
+                    </a>
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-3.png" alt="">
+                    </a>
+                    <a href="#" class="home-logos__item">
+                        <img src="img/photo/home-logos-4.png" alt="">
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>
