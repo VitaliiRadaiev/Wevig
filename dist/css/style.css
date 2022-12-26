@@ -2568,7 +2568,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #13324a;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 1.66em;
   -webkit-transition: opacity 0.8s ease;
@@ -3271,9 +3271,9 @@ figure {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateY(0%) !important;
+      -ms-transform: translateY(0%) !important;
+          transform: translateY(0%) !important;
 }
 
 .header__body {
@@ -3319,6 +3319,7 @@ figure {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin-left: 1.66em;
+  color: #fff;
 }
 
 .menu__list {
@@ -3611,6 +3612,7 @@ figure {
 }
 
 .footer__row-1 .footer__body.container-second {
+  padding-right: 0;
   max-width: 169rem !important;
 }
 
@@ -3628,6 +3630,7 @@ figure {
 }
 
 .footer__row-2 .footer__body.container-second {
+  padding-right: 0;
   max-width: 169rem !important;
 }
 
@@ -3651,6 +3654,7 @@ figure {
 }
 
 .footer__row-3 .footer__body.container-second {
+  padding-right: 0;
   max-width: 160rem !important;
 }
 
@@ -4739,6 +4743,7 @@ figure {
   color: #707070;
   max-width: 51.6rem;
   margin-bottom: 3.4rem;
+  letter-spacing: 0.007em;
 }
 
 .home-banner__btn {
@@ -4895,6 +4900,7 @@ figure {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-weight: 500 !important;
 }
 
 .home-downloads__list-text {
@@ -4904,6 +4910,7 @@ figure {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding-right: 1rem;
 }
 
 .home-downloads__list-text > *:last-child {
@@ -6147,7 +6154,7 @@ figure {
 
   .home-downloads__list-text-wrap {
     padding-top: 5.4rem;
-    border-top: 2px solid #52bdec;
+    border-top: 1px solid #52bdec;
   }
 
   .blog-single__text:first-child:before {
@@ -6427,14 +6434,16 @@ figure {
 
   .container {
     width: calc(100% - 64px);
+    padding-right: 6rem;
   }
 
   .container-second {
     width: calc(100% - 64px);
+    padding-right: 6rem;
   }
 
   .current-posts__body {
-    padding-right: 18px;
+    padding-right: 10rem;
   }
 
   .current-posts__side-link-wrap {
@@ -6611,6 +6620,8 @@ figure {
 
   .header__burger {
     margin-left: 0;
+    padding: 1rem;
+    background-color: rgba(19, 50, 74, 0.2);
   }
 
   .burger {
@@ -6856,12 +6867,12 @@ figure {
   }
 
   .home-downloads__list-title {
-    font-weight: 500 !important;
     margin-bottom: 0;
   }
 
   .home-downloads__list-text {
     display: none;
+    padding-right: 0;
   }
 
   .blog-section {

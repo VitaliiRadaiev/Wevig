@@ -51,7 +51,7 @@
 
     &.header--is-scroll {
         transition: all .3s ease;
-        transform: translateY(0%);
+        transform: translateY(0%) !important;
     }
 
     &__body {
@@ -114,12 +114,16 @@
     &__burger {
         flex: 0 0 auto;
         margin-left: 1.66em;
+        color: #fff;
+
         @media (min-width: 992px) {
             display: none;
         }
 
         @media (max-width: $md3+px) {
             margin-left: 0;
+            padding: 1rem;
+            background-color: rgba($mainColor, 0.2);
         }
     }
 }
