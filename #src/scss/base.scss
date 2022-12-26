@@ -209,7 +209,7 @@ h6,
 .side-title {
 	pointer-events: auto;
 	position: relative;
-	width: 8rem;
+	width: 16rem;
 	flex: 0 0 auto;
 	z-index: 5;
 	font-size: 5rem;
@@ -260,9 +260,6 @@ h6,
 		white-space: nowrap;
 		z-index: 2;
 
-		@media (max-width: 1790px) {
-			right: 6.5rem;
-		}
 
 		@media (max-width: $md3+px) {
 			right: 5.5rem;
@@ -274,7 +271,9 @@ h6,
 	position: relative;
 
 	&.container {
-		max-width: 169rem !important;
+		width: 100%;
+		padding: 0;
+		max-width: 185rem !important;
 	}
 }
 
@@ -307,9 +306,10 @@ figure {
 
 .container {
 	width: calc(100% - 100px);
-	max-width: 175rem !important;
+	max-width: 181rem !important;
 	margin: 0 auto;
 	padding: 0;
+	padding-right: 6rem;
 
 	@media (max-width: $md1+px) {
 		width: calc(100% - 64px);
