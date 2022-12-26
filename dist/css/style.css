@@ -3836,35 +3836,11 @@ figure {
   overflow: hidden;
 }
 
-.promo-header__bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: #215077;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.promo-header__bg:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 80, 119, 0.4);
-  z-index: 5;
-}
-
-.promo-header__bg:not(.loaded) .promo-header__bg-layer {
+.promo-header:not(.loaded) .promo-header__bg-layer {
   opacity: 0;
 }
 
-.promo-header__bg.spiner::after {
+.promo-header.spiner::after {
   position: absolute;
   content: "";
   z-index: 999;
@@ -3882,14 +3858,34 @@ figure {
   animation: preloadBody 2s linear infinite;
 }
 
+.promo-header__bg {
+  position: absolute;
+  left: -7%;
+  bottom: -7%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #215077;
+}
+
+.promo-header__bg:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 80, 119, 0.2);
+  z-index: 5;
+}
+
 .promo-header__bg-layer {
   position: absolute;
 }
 
 .promo-header__bg-layer--1 {
-  z-index: 4;
-  top: 0;
-  left: 0;
+  position: relative;
+  z-index: 5;
   width: 100%;
   height: 100%;
 }
@@ -3909,7 +3905,7 @@ figure {
 .promo-header__bg-layer--2 {
   z-index: 3;
   left: 0;
-  bottom: 0;
+  bottom: 6%;
   top: auto !important;
   width: 100%;
   display: -webkit-box;
@@ -3923,9 +3919,32 @@ figure {
 .promo-header__bg-layer--2 img {
   width: 100%;
   height: auto;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .promo-header__bg-layer--3 {
+  z-index: 4;
+  left: 0;
+  bottom: 0;
+  top: auto !important;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.promo-header__bg-layer--3 img {
+  width: 100%;
+  height: auto;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.promo-header__bg-layer--4 {
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -3936,7 +3955,7 @@ figure {
           transform: translate(-50%, -50%);
 }
 
-.promo-header__bg-layer--3 img {
+.promo-header__bg-layer--4 img {
   position: absolute;
   top: 0;
   left: 0;
@@ -3948,21 +3967,55 @@ figure {
      object-position: top;
 }
 
-.promo-header__bg-layer--4 {
-  width: 14%;
+.promo-header__bg-layer--5 {
+  width: 31%;
   z-index: 2;
-  top: 50% !important;
-  left: 31% !important;
+  top: 59% !important;
+  left: 69% !important;
 }
 
-.promo-header__bg-layer--4 img {
+.promo-header__bg-layer--5 img {
   width: 100%;
   height: auto;
 }
 
+.promo-header__bg-layer--5 > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: swing 3.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: swing 3.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(1deg) translateX(1%);
+            transform: rotateZ(1deg) translateX(1%);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-1deg) translateX(-1%);
+            transform: rotateZ(-1deg) translateX(-1%);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(1deg) translateX(1%);
+            transform: rotateZ(1deg) translateX(1%);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-1deg) translateX(-1%);
+            transform: rotateZ(-1deg) translateX(-1%);
+  }
+}
+
 .promo-header__body {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4907,7 +4960,7 @@ figure {
   height: auto;
 }
 
-.blog {
+.blog-section {
   padding-top: 6rem;
   padding-bottom: 8.5rem;
   position: relative;
@@ -6466,6 +6519,10 @@ figure {
     padding: 0 32px;
   }
 
+  .promo-header {
+    pointer-events: none;
+  }
+
   .current-posts__side-link-wrap {
     width: 20rem;
   }
@@ -6818,7 +6875,7 @@ figure {
     display: none;
   }
 
-  .blog {
+  .blog-section {
     padding-top: 5.3rem;
     padding-bottom: 12.4rem;
   }

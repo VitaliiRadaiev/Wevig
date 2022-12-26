@@ -2,15 +2,46 @@
     position: relative;
     overflow: hidden;
 
+    @media (max-width: $md2+px) {
+        pointer-events: none;
+    }
+
+    &:not(.loaded) {
+        & .promo-header__bg-layer {
+            opacity: 0;
+        }
+    }
+
+    &.spiner {
+        &::after {
+            position: absolute;
+            content: '';
+            z-index: 999;
+            top: 50%;
+            left: 50%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 4px solid #6e6e6e;
+            border-right: 4px solid #fff;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-animation: preloadBody 2s linear infinite;
+            animation: preloadBody 2s linear infinite;
+        }
+    }
+
     &__bg {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        left: -7%;
+        bottom: -7%;
         width: 100%;
         height: 100%;
         z-index: 1;
         background: #215077;
-        transform: translate(-50%, -50%);
+
+
 
         &:before {
             position: absolute;
@@ -19,35 +50,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(#215077, 0.4);
+            background-color: rgba(#215077, 0.2);
             z-index: 5;
         }
 
-        &:not(.loaded) {
-            & .promo-header__bg-layer {
-                opacity: 0;
-            }
-        }
-
-        &.spiner {
-            &::after {
-                position: absolute;
-                content: '';
-                z-index: 999;
-                top: 50%;
-                left: 50%;
-                height: 50px;
-                width: 50px;
-                border-radius: 50%;
-                border: 4px solid #6e6e6e;
-                border-right: 4px solid #fff;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                -webkit-animation: preloadBody 2s linear infinite;
-                animation: preloadBody 2s linear infinite;
-            }
-        }
     }
 
     &__bg-layer {
@@ -55,9 +61,8 @@
 
 
         &--1 {
-            z-index: 4;
-            top: 0;
-            left: 0;
+            position: relative;
+            z-index: 5;
             width: 100%;
             height: 100%;
 
@@ -74,6 +79,21 @@
         &--2 {
             z-index: 3;
             left: 0;
+            bottom: 6%;
+            top: auto !important;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            & img {
+                width: 100%;
+                height:  auto;
+                object-position: top;
+            }
+        }
+        &--3 {
+            z-index: 4;
+            left: 0;
             bottom: 0;
             top: auto !important;
             width: 100%;
@@ -83,16 +103,18 @@
             & img {
                 width: 100%;
                 height:  auto;
+                object-position: top;
             }
         }
-        &--3 {
+        &--4 {
             z-index: 1;
-
             top: 50%;
             left: 50%;
             width: 100%;
             height: 100%;
             transform: translate(-50%, -50%);
+
+
             
             & img {
                 position: absolute;
@@ -105,22 +127,40 @@
             }
         }
 
-        &--4 {
-            width: 14%;
+        &--5 {
+            width: 31%;
             z-index: 2;
-            top: 50% !important;
-            left: 31% !important;
+            top: 59% !important;
+            left: 69% !important;
 
             & img {
                 width: 100%;
                 height: auto;
+            }
+
+            & > div {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                animation: swing 3.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            }
+
+            @keyframes swing {
+                0% {
+                    transform: rotateZ(1deg) translateX(1%);
+                }
+                100% {
+                    transform: rotateZ(-1deg) translateX(-1%);
+                }
             }
         }
     }
 
     &__body {
         position: relative;
-        z-index: 2;
+        z-index: 5;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
