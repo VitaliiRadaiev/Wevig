@@ -2568,9 +2568,8 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #13324a;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2.4rem;
-  font-weight: 400;
   line-height: 1.66em;
   -webkit-transition: opacity 0.8s ease;
   -o-transition: opacity 0.8s ease;
@@ -3549,7 +3548,6 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #52bdec;
   background-color: #13324a;
   color: #fff;
   opacity: 1 !important;
@@ -3560,7 +3558,7 @@ figure {
 }
 
 .side-contacts__item:not(:last-child) {
-  margin-bottom: -1px;
+  margin-bottom: 1px;
 }
 
 .side-contacts__icon {
@@ -3946,32 +3944,23 @@ figure {
 
 .promo-header__bg-layer--4 {
   z-index: 1;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .promo-header__bg-layer--4 img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  height: auto;
 }
 
 .promo-header__bg-layer--5 {
   width: 31%;
   z-index: 2;
-  top: 59% !important;
-  left: 69% !important;
+  top: 59.5% !important;
+  left: auto !important;
+  right: 0% !important;
 }
 
 .promo-header__bg-layer--5 img {

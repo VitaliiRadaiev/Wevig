@@ -355,7 +355,6 @@
     &__item {
         display: flex;
         align-items: center;
-        border: 1px solid $secondColor;
         background-color: $mainColor;
         color: #fff;
         opacity: 1 !important;
@@ -363,7 +362,7 @@
         transform: translateX(24rem);
 
         &:not(:last-child) {
-            margin-bottom: -1px;
+            margin-bottom: 1px;
         }
 
         @media (min-width: 992px) {
