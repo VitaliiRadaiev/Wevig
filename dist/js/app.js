@@ -1286,6 +1286,17 @@ function setCoverVideoIframe(iframe, parent, size) {
         setSize(size.desk.w, size.desk.h);
     });
 };
+		{
+    let btn = document.querySelector('[data-to-up]');
+    if(btn) {
+        btn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            })
+        })
+    }
+};
 	}
 
 	componentsAfterLoad() {

@@ -109,6 +109,11 @@
             color: inherit !important;
             word-break: break-word;
             display: flex;
+            opacity: 1 !important;
+
+            &:hover {
+                color: $secondColor !important;
+            }
         }
 
         & .label {

@@ -41,7 +41,7 @@
         }
 
         @media (max-width: $md4+px) {
-            padding-right: 6rem;
+            padding-right: 10rem;
         }
 
         & .text-block__text {
@@ -63,7 +63,7 @@
         color: #fff;
 
         @media (max-width: $md3+px) {
-            padding: 13rem 7rem 8rem;
+            padding: 13rem 8rem 8rem;
         }
 
         &:before {

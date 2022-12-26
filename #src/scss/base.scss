@@ -175,6 +175,7 @@ h2,
 	font-size: 4.8rem;
 	font-weight: 300;
 	line-height: 1.2em;
+	word-break: break-word;
 }
 
 h3,
@@ -182,24 +183,28 @@ h3,
 	font-size: 4rem;
 	font-weight: 300;
 	line-height: 1.175em;
+	word-break: break-word;
 }
 h4,
 .title-4 {
 	font-size: 3.2rem;
 	font-weight: 400;
 	line-height: 1.1875em;
+	word-break: break-word;
 }
 h5,
 .title-5 {
 	font-weight: 700;
 	font-size: 3rem;
 	line-height: 1.1875em;
+	word-break: break-word;
 }
 h6,
 .title-6 {
 	font-size: 2.8rem;
 	font-weight: 400;
 	line-height: 1.178em;
+	word-break: break-word;
 }
 
 .side-title-wrap {
@@ -326,9 +331,10 @@ figure {
 }
 .container-second {
 	width: calc(100% - 100px);
-	max-width: 156rem !important;
+	max-width: 162rem !important;
 	margin: 0 auto;
 	padding: 0;
+	padding-right: 6rem;
 
 	@media (max-width: $md1+px) {
 		width: calc(100% - 64px);

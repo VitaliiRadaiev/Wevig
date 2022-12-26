@@ -368,7 +368,7 @@
     &__item {
         display: flex;
         align-items: center;
-        background-color: $mainColor;
+        background-color: rgba($mainColor, 0.9);
         color: #fff;
         opacity: 1 !important;
         pointer-events: auto;

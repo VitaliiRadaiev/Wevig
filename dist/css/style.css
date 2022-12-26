@@ -2696,6 +2696,7 @@ h2,
   font-size: 4.8rem;
   font-weight: 300;
   line-height: 1.2em;
+  word-break: break-word;
 }
 
 h3,
@@ -2703,6 +2704,7 @@ h3,
   font-size: 4rem;
   font-weight: 300;
   line-height: 1.175em;
+  word-break: break-word;
 }
 
 h4,
@@ -2710,6 +2712,7 @@ h4,
   font-size: 3.2rem;
   font-weight: 400;
   line-height: 1.1875em;
+  word-break: break-word;
 }
 
 h5,
@@ -2717,6 +2720,7 @@ h5,
   font-weight: 700;
   font-size: 3rem;
   line-height: 1.1875em;
+  word-break: break-word;
 }
 
 h6,
@@ -2724,6 +2728,7 @@ h6,
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.178em;
+  word-break: break-word;
 }
 
 .side-title-wrap {
@@ -2826,9 +2831,10 @@ figure {
 
 .container-second {
   width: calc(100% - 100px);
-  max-width: 156rem !important;
+  max-width: 162rem !important;
   margin: 0 auto;
   padding: 0;
+  padding-right: 6rem;
 }
 
 .padding-wrap {
@@ -3554,7 +3560,7 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #13324a;
+  background-color: rgba(19, 50, 74, 0.9);
   color: #fff;
   opacity: 1 !important;
   pointer-events: auto;
@@ -4324,6 +4330,11 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1 !important;
+}
+
+.team-card__contact a:hover {
+  color: #52bdec !important;
 }
 
 .team-card__contact .label {
@@ -4707,6 +4718,43 @@ figure {
           transform: rotate(-5deg);
 }
 
+.btn-growup {
+  background-color: transparent;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  width: 6rem;
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  z-index: 50;
+  padding: 0;
+  -webkit-transition: opacity 0.6s ease, color 0.3s ease;
+  -o-transition: opacity 0.6s ease, color 0.3s ease;
+  transition: opacity 0.6s ease, color 0.3s ease;
+  color: #13324a;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn-growup svg {
+  width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.btn-growup svg path {
+  fill: currentColor;
+}
+
+.btn-growup--show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .home-banner__body {
   position: relative;
 }
@@ -5053,7 +5101,7 @@ figure {
 }
 
 .blog-single__text.container-second {
-  max-width: 154rem !important;
+  max-width: 160rem !important;
 }
 
 .blog-single__text > *:last-child {
@@ -5159,7 +5207,7 @@ figure {
 
 .blog-single-hero__img {
   position: absolute;
-  right: 0;
+  right: 4rem;
   bottom: 0;
   width: 39.87%;
   height: 36rem;
@@ -5279,9 +5327,11 @@ figure {
   line-height: 5.4rem;
   color: #52bdec !important;
   padding: 1rem;
+  opacity: 1 !important;
 }
 
-.team__head-link img {
+.team__head-link img,
+.team__head-link svg {
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -5292,6 +5342,13 @@ figure {
   height: 90%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.team__head-link img path,
+.team__head-link svg path {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .administrator-search {
@@ -5755,7 +5812,7 @@ figure {
   position: relative;
   z-index: 2;
   padding-top: 2rem;
-  padding-left: 5.4rem;
+  padding-left: 11.4rem;
 }
 
 .contact-head__body.container-second {
@@ -6193,7 +6250,7 @@ figure {
     display: block;
     float: right;
     height: 12.5rem;
-    width: 45%;
+    width: 46%;
   }
 
   .downloads__inner {
@@ -6292,6 +6349,10 @@ figure {
     opacity: 0.7;
   }
 
+  .btn-growup:hover {
+    color: #13324a;
+  }
+
   .home-downloads__link:hover {
     -webkit-transform: translateX(50px);
         -ms-transform: translateX(50px);
@@ -6304,6 +6365,14 @@ figure {
 
   .home-downloads__list-item:hover .home-downloads__list-text {
     color: #fff;
+  }
+
+  .team__head-link:hover {
+    border-color: #fff;
+  }
+
+  .team__head-link:hover svg path {
+    fill: #fff;
   }
 }
 
@@ -6438,7 +6507,7 @@ figure {
 
 @media (max-width: 1713px) {
   .contact-head__body {
-    padding-left: 10rem;
+    padding-left: 16rem;
   }
 }
 
@@ -6867,6 +6936,11 @@ figure {
     margin-bottom: 2rem;
   }
 
+  .btn-growup {
+    bottom: 20px;
+    width: 40px;
+  }
+
   .home-banner {
     padding-bottom: 0;
   }
@@ -7035,7 +7109,7 @@ figure {
 
   .blog-single__text {
     padding-left: 5.6rem;
-    padding-right: 5.6rem;
+    padding-right: 6rem;
   }
 
   .blog-single__text.text-content {
@@ -7059,6 +7133,7 @@ figure {
   .blog-single-hero__title {
     font-size: 4.4rem;
     line-height: 1.8em;
+    max-width: none;
   }
 
   .blog-single-hero__img {
@@ -7070,6 +7145,7 @@ figure {
     height: 21.7rem;
     padding: 1.7rem 2rem 0;
     margin-right: 4.7rem;
+    right: 0;
   }
 
   .gallery {
@@ -7223,7 +7299,7 @@ figure {
   }
 
   .services__body {
-    padding: 13rem 7rem 8rem;
+    padding: 13rem 8rem 8rem;
   }
 
   .services__text.text-content {
@@ -7263,7 +7339,7 @@ figure {
   }
 
   .contact__title span {
-    right: 4.7rem;
+    right: 4.2rem;
   }
 
   .contact__head {
@@ -7274,16 +7350,20 @@ figure {
     display: block;
   }
 
+  .contact__body.container {
+    padding: 0;
+  }
+
   .contact__col-1 {
-    padding: 19rem 3rem 4rem;
+    padding: 19rem 6rem 4rem;
   }
 
   .contact__col-1:before {
     right: auto;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    left: -20px;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
   }
 
   .contact__col-1 .team__head-link {
@@ -7292,14 +7372,11 @@ figure {
   }
 
   .contact__col-2 {
-    padding: 13.8rem 3rem 6.4rem;
+    padding: 13.8rem 6rem 6.4rem;
   }
 
   .contact__col-2:before {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    left: -20px;
   }
 
   .contact__col-2 .contact__title-second {
@@ -7311,8 +7388,8 @@ figure {
   }
 
   .contact-head__body {
-    padding-left: 5.4rem;
-    padding-right: 5.4rem;
+    padding-left: 8.4rem;
+    padding-right: 6.4rem;
     padding-top: 8rem;
   }
 
@@ -7381,7 +7458,7 @@ figure {
   .info__content {
     padding-top: 34.8rem;
     padding-left: 10.2rem;
-    padding-right: 5rem;
+    padding-right: 6rem;
   }
 
   .info__text.text-content h2 {
@@ -7426,7 +7503,7 @@ figure {
 
   .blog-single__text {
     padding-left: 4.6rem;
-    padding-right: 4.6rem;
+    padding-right: 6rem;
   }
 
   .gallery > li {
@@ -7434,7 +7511,7 @@ figure {
   }
 
   .services__head {
-    padding-right: 6rem;
+    padding-right: 10rem;
   }
 
   .about__head {

@@ -43,15 +43,15 @@
 
         @media (max-width: $md3+px) {
             padding-left: 5.6rem;
-            padding-right: 5.6rem;
+            padding-right: 6rem;
         }
         @media (max-width: $md4+px) {
             padding-left: 4.6rem;
-            padding-right: 4.6rem;
+            padding-right: 6rem;
         }
 
         &.container-second {
-            max-width: 154rem !important;
+            max-width: 160rem !important;
         }
 
         & > *:last-child {
@@ -82,7 +82,7 @@
                     display: block;
                     float: right;
                     height: 12.5rem;
-                    width: 45%;
+                    width: 46%;
     
                 }
             }
@@ -203,12 +203,13 @@
         @media (max-width: $md3+px) {
             font-size: 4.4rem;
             line-height: 1.8em;
+            max-width: none;
         }
     }
 
     &__img {
         position: absolute;
-        right: 0;
+        right: 4rem;
         bottom: 0;
         width: 39.87%;
         height: 36rem;
@@ -225,6 +226,7 @@
             height: 21.7rem;
             padding: 1.7rem 2rem 0;
             margin-right: 4.7rem;
+            right: 0;
         }
         
         & img {
