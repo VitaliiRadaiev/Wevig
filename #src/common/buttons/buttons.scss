@@ -5,7 +5,7 @@
     text-align: center;
     outline: none;
     min-height: 2.875em;
-    border: 1px solid currentColor;
+    border: 0.5px solid currentColor;
     padding: 0.4em 0.75em;
     line-height: 1.2em;
     transition: all .3s ease;
@@ -25,13 +25,13 @@
 
 
     &--light {
-        color: #fff;
+        color: #fff !important;
         opacity: 1 !important;
 
         @media (min-width: 992px) {
             &:hover {
                 transition: all .3s ease;
-                color: $secondColor;
+                border-color: $secondColor;
             }
         }
     }

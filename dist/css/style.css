@@ -3233,7 +3233,7 @@ figure {
 
 .header.header--dark .header__logo,
 .header.header--dark-scroll .header__logo {
-  max-width: 12.7rem;
+  max-width: 11.2rem;
 }
 
 .header.header--dark .menu__link::before,
@@ -3283,12 +3283,13 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 6rem;
+  padding: 0 11rem 0 8rem;
   min-height: 14.16em;
-  gap: 1.96em;
+  gap: 3.24em;
   color: #fff;
   font-size: 2.4rem;
   line-height: 1.2em;
+  font-weight: 300;
 }
 
 .header__logo {
@@ -3312,6 +3313,7 @@ figure {
   -webkit-transition: all 0s ease;
   -o-transition: all 0s ease;
   transition: all 0s ease;
+  padding: 0.4em 1.45em;
 }
 
 .header__burger {
@@ -3326,7 +3328,7 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.24em;
+  gap: 2.06em;
   padding-left: 0;
   margin-bottom: 0;
 }
@@ -3787,7 +3789,7 @@ figure {
   text-align: center;
   outline: none;
   min-height: 2.875em;
-  border: 1px solid currentColor;
+  border: 0.5px solid currentColor;
   padding: 0.4em 0.75em;
   line-height: 1.2em;
   -webkit-transition: all 0.3s ease;
@@ -3811,7 +3813,7 @@ figure {
 }
 
 .btn-default--light {
-  color: #fff;
+  color: #fff !important;
   opacity: 1 !important;
 }
 
@@ -6225,7 +6227,7 @@ figure {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: #52bdec;
+    border-color: #52bdec;
   }
 
   .btn-default--light-second:hover {
@@ -6382,6 +6384,12 @@ figure {
 }
 
 @media (max-width: 1567.98px) {
+  .header.header--dark .header__body,
+  .header.header--dark-scroll .header__body {
+    font-size: 1.5rem;
+    padding-right: 8rem;
+  }
+
   .header__body {
     font-size: 1.8rem;
   }

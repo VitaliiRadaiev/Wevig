@@ -15,10 +15,15 @@
             min-height: 8.9rem;
             background-color: $mainColor;
             font-size: 1.8rem;
+
+            @media (max-width: 1567.98px) {
+                font-size: 1.5rem;
+                padding-right: 8rem;
+            }
         }
 
         & .header__logo {
-            max-width: 12.7rem;
+            max-width: 11.2rem;
         }
 
         & .menu__link {
@@ -57,12 +62,13 @@
     &__body {
         display: flex;
         align-items: center;
-        padding: 0 6rem;
+        padding: 0 11rem 0 8rem;
         min-height: 14.16em;
-        gap: 1.96em;
+        gap: 3.24em;
         color: #fff;
         font-size: 2.4rem;
         line-height: 1.2em;
+        font-weight: 300;
 
         @media (max-width: 1567.98px) {
             font-size: 1.8rem;
@@ -104,6 +110,7 @@
         flex: 0 0 auto;
         &.btn-default {
             transition: all 0s ease;
+            padding: 0.4em 1.45em;
         }
 
         @media (max-width: $md3+px) {
@@ -131,9 +138,11 @@
 .menu {
     &__list {
         display: flex;
-        gap: 2.24em;
+        gap: 2.06em;
         padding-left: 0;
         margin-bottom: 0;
+
+
     }
 
     &__link {
