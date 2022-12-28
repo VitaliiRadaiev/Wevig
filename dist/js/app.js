@@ -1295,6 +1295,12 @@ function setCoverVideoIframe(iframe, parent, size) {
                 behavior: 'smooth',
             })
         })
+
+        btn.classList.toggle('btn-growup--hide', window.pageYOffset < document.documentElement.clientHeight / 2);
+        
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('btn-growup--hide', window.pageYOffset < document.documentElement.clientHeight / 2);
+        })
     }
 };
 	}

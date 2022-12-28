@@ -74,6 +74,10 @@
             font-size: 1.8rem;
         }
 
+        @media (max-width: $md1+px) {
+            font-size: 1.6rem;
+        }
+
         @media (max-width: $md2+px) {
             padding: 0 32px;
         }
