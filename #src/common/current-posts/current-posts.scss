@@ -24,6 +24,10 @@
         @media (max-width: $md1+px) {
             padding-right: 10rem;
         }
+
+        @media (max-width: $md3+px) {
+            gap: 5rem;
+        }
     }
 
     &__side-link-wrap {
@@ -87,7 +91,7 @@
             white-space: nowrap;
 
             @media (max-width: $md3+px) {
-                right: 6rem;
+                right: 5.5rem;
             }
         }
     }

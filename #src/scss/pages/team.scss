@@ -8,6 +8,11 @@
         padding-bottom: 17.5rem;
     }
 
+    @media (max-width: $md4+px) {
+        padding-bottom: 8rem;
+    }
+
+
     &__title {
         position: absolute;
         top: 10.9rem;
@@ -22,6 +27,10 @@
 
         @media (max-width: $md3+px) {
             margin-bottom: 21.5rem;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 8rem;
         }
 
         &:before {
@@ -100,13 +109,19 @@
         }
 
         @media (max-width: $md3+px) {
-            margin-left: 3.5rem;
             min-height: 14.2rem;
             max-width: 47.3rem;
             font-size: 2.8rem;
             line-height: 4.4rem;
             margin-bottom: 16.9rem;
+            margin-left: 0;
         }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 6rem;
+        }
+
+
 
         & img, & svg {
             position: absolute;
@@ -127,6 +142,10 @@
         @media (max-width: $md3+px) {
             font-size: 4.4rem;
             max-width: 47.5rem;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 4rem;
         }
     }
 

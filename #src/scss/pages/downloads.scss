@@ -6,6 +6,10 @@
         padding: 4.9rem 0 17.3rem;
     }
 
+    @media (max-width: $md4+px) {
+        padding-bottom: 8rem;
+    }
+
     &__title {
         position: absolute;
         top: 10rem;
@@ -29,8 +33,13 @@
             padding: 17.5rem 8rem 9rem 16.3rem;
         }
 
+        @media (max-width: $md4+px) {
+            padding-top: 12rem;
+            padding-left: 12rem;
+        }
+
         &.container {
-            width: calc(100% - 12rem);
+            width: calc(100% - 16rem);
             max-width: 171rem !important;
 
             @media (max-width: $md3+px) {
@@ -67,6 +76,10 @@
             margin-bottom: 15rem;
         }
 
+        @media (max-width: $md4+px) {
+            margin-bottom: 8rem;
+        }
+
         & .home-downloads__list-item {
             max-width: none;
             align-items: initial;
@@ -80,7 +93,7 @@
         & .home-downloads__list-title {
             display: inline-block;
             padding-top: 5.4rem;
-            border-top: 2px solid $secondColor;
+            border-top: 1px solid $secondColor;
 
             @media (max-width: $md3+px) {
                 display: block;

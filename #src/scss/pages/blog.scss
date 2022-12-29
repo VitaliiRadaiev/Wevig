@@ -7,6 +7,10 @@
         padding-top: 5.3rem;
         padding-bottom: 12.4rem;
     }
+
+    @media (max-width: $md4+px) {
+        padding-bottom: 8rem;
+    }
 }
 .blog {
     &__body {
@@ -33,6 +37,10 @@
             @media (max-width: $md3+px) {
                 padding-left: 14rem;
             }
+
+            @media (max-width: $md4+px) {
+                padding-left: 12rem;
+            }
         }
     }
 
@@ -48,6 +56,10 @@
 
             & .side-title {
                 width: 13rem;
+
+                & span {
+                    right: 6.5rem;
+                }
             }
         }
     }
@@ -60,12 +72,16 @@
         gap: 0 8.5rem;
 
         @media (max-width: $xl1+px) {
-            gap: 0 6rem;
+            gap: 0 4rem;
         }
 
         @media (max-width: $md3+px) {
             margin-bottom: 13.4rem;
             justify-content: center;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 0rem;
         }
 
         & > li {
@@ -87,7 +103,11 @@
 
             @media (max-width: $md3+px) {
                 flex: 0 1 100%;
-                max-width: 32.7rem;
+                max-width: 327px;
+            }
+
+            @media (max-width: $md4+px) {
+                margin-bottom: 6rem;
             }
 
             @media (min-width: 1268px) {

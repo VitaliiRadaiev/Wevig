@@ -179,6 +179,19 @@
             }
         }
 
+        @media (max-width: $md4+px) {
+            padding-top: 8rem;
+
+
+            & .home-banner__body {
+                padding-right: 3rem;
+
+                &.container-second {
+                    width: calc(100% - 12rem);
+                }
+            }
+        }
+
     }
 }
 
@@ -188,6 +201,11 @@
     padding-bottom: 9rem;
     color: #fff;
 
+    @media (max-width: $md3+px) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
     &__body {
         display: flex;
         gap: 13rem;
@@ -196,6 +214,10 @@
 
         @media (max-width: $xl1+px) { 
             gap: 50px;
+        }
+
+        @media (max-width: $md3+px) {
+            gap: 5rem;
         }
 
         &.container-second {
@@ -398,6 +420,11 @@
     &.padding-wrap {
         padding-top: 20rem;
         padding-bottom: 18rem;
+
+        @media (max-width: $md3+px) {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
     }
     &__body {
         display: grid;

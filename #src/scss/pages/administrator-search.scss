@@ -6,6 +6,10 @@
         padding-bottom: 26.5rem;
     }
 
+    @media (max-width: $md4+px) {
+        padding-bottom: 8rem;
+    }
+
     & .team__title {
         top: 9.9rem;
     }
@@ -22,7 +26,7 @@
             text-align: left;
 
             @media (max-width: $md3+px) {
-                right: 8.2rem;
+                right: 7.2rem;
             }
         }
     }
@@ -32,6 +36,9 @@
 
         @media (max-width: $md3+px) {
             margin-bottom: 16.3rem;
+        }
+        @media (max-width: $md4+px) {
+            margin-bottom: 8rem;
         }
         &::before {
             width: calc(100% - 5.7rem);
@@ -49,6 +56,11 @@
             padding-bottom: 12.9rem;
         }
 
+        @media (max-width: $md4+px) {
+            padding-left: 14rem;
+            padding-bottom: 8rem;
+        }
+
         &.container {
             max-width: 169rem !important;
         }
@@ -62,6 +74,11 @@
             font-size: 4.4rem;
             margin-left: 1rem;
             margin-bottom: 8rem;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-left: 0;
+            margin-bottom: 4rem;
         }
     }
 
@@ -82,6 +99,10 @@
             padding: 0 7rem;
         }
 
+        @media (max-width: $md4+px) {
+            padding: 0 6rem;
+        }
+
         &.container-second {
             max-width: 151rem !important;
         }
@@ -94,6 +115,10 @@
         @media (max-width: $md3+px) {
             max-width: none;
             margin-bottom: 17.5rem;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 8rem;
         }
     }
 
@@ -129,7 +154,7 @@
                 width: calc(100% - 7.2rem);
                 height: 1px;
                 z-index: 2;
-                border-bottom: 2px dotted $secondColor;
+                border-bottom: 0.5px dashed $secondColor;
             }
         }
     }

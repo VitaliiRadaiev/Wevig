@@ -20,6 +20,13 @@
                 font-size: 1.5rem;
                 padding-right: 8rem;
             }
+
+            @media (max-width: $md2+px) {
+                padding-right: 32px;
+            }
+            @media (max-width: $md3+px) {
+                padding-right: 20px;
+            }
         }
 
         & .header__logo {

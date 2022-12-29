@@ -12,11 +12,11 @@
             top: 5rem;
 
             & .side-title {
-                width: 7rem;
+                width: 11rem;
             }
 
             & span {
-                right: 4.5rem;
+                right: 5.5rem;
             }
         }
     }
@@ -47,6 +47,10 @@
                     font-size: 4.4rem;
                     line-height: 5.6rem;
                     margin-bottom: 4rem;
+                }
+
+                @media (max-width: $md4+px) {
+                    font-size: 4rem;
                 }
             }
         }
