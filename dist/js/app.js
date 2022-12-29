@@ -1271,11 +1271,11 @@ function setCoverVideoIframe(iframe, parent, size) {
         let percentWidth = widthVideo / heightVideo * 100;
 
         if ((parent.clientHeight / parent.clientWidth * 100) < percentHeight) {
-            iframe.style.width = 'calc(100% + 14%)';
-            iframe.style.height = (parent.clientWidth / 100 * percentHeight) + ((parent.clientWidth / 100 * percentHeight) * 0.14) + 'px';
+            iframe.style.width = 'calc(100% + 18%)';
+            iframe.style.height = (parent.clientWidth / 100 * percentHeight) + ((parent.clientWidth / 100 * percentHeight) * 0.18) + 'px';
         } else {
-            iframe.style.width = (parent.clientHeight / 100 * percentWidth) + ((parent.clientWidth / 100 * percentHeight) * 0.14)  + 'px';
-            iframe.style.height = 'calc(100% + 14%)';
+            iframe.style.width = (parent.clientHeight / 100 * percentWidth) + ((parent.clientWidth / 100 * percentHeight) * 0.18)  + 'px';
+            iframe.style.height = 'calc(100% + 18%)';
         }
     }
 
