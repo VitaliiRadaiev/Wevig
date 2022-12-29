@@ -4887,8 +4887,8 @@ figure {
 
 .home-downloads {
   background: #13324a;
-  padding-top: 13rem;
-  padding-bottom: 9rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   color: #fff;
 }
 
@@ -6580,6 +6580,12 @@ figure {
 @media (max-width: 1713px) {
   .contact-head__body {
     padding-left: 15rem;
+  }
+}
+
+@media (max-width: 1575.98px) {
+  html {
+    font-size: 8px;
   }
 }
 

@@ -32,6 +32,10 @@ html {
 		font-size: 14px;
 	}
 
+	@media (max-width: 1575.98px) {
+		font-size: 8px;
+	}
+
 	@media (max-width: $md1+px) {
 		font-size: 8px;
 	}
