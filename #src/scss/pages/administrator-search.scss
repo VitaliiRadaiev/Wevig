@@ -22,13 +22,6 @@
             width: 14rem;
             line-height: 1.2em;
         }
-        & span {
-            text-align: left;
-
-            @media (max-width: $md3+px) {
-                right: 7.2rem;
-            }
-        }
     }
 
     & .team__head {
@@ -80,12 +73,34 @@
             margin-left: 0;
             margin-bottom: 4rem;
         }
+
+                & a {
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+    
+            &:hover {
+                color: $secondColor !important;
+            }
+        }
     }
 
     & .team__head-subtitle {
         font-size: 2.7rem;
         font-weight: 300;
         line-height: 5.4rem;
+
+                & a {
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+    
+            &:hover {
+                color: $secondColor !important;
+            }
+        }
     }
 
 
@@ -120,6 +135,12 @@
         @media (max-width: $md4+px) {
             margin-bottom: 8rem;
         }
+
+        & .administrator-search__field {
+            &::before {
+                top: 8rem !important;
+            }
+        }
     }
 
     &__col-2 {
@@ -130,6 +151,14 @@
         @media (max-width: $md1+px) {
             margin-left: auto;
             margin-right: auto;
+        }
+
+        & .team-card {
+            height: auto;
+
+            &:not(:last-child) {
+                margin-bottom: 8rem;
+            }
         }
     }
 
@@ -142,19 +171,23 @@
 
     &__field {
         position: relative;
+        text-align: left;
 
         &:not(.not-line) {
 
             &:before {
                 position: absolute;
                 content: '';
-                bottom: 2rem;
+                top: 6rem;
                 left: 50%;
                 transform: translateX(-50%);
                 width: calc(100% - 7.2rem);
                 height: 1px;
                 z-index: 2;
-                border-bottom: 0.5px dashed $secondColor;
+                background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+                background-position: left 0  bottom 0;
+                background-repeat: repeat-x;
+                background-size: 5px 0.5px;
             }
         }
     }
@@ -171,5 +204,11 @@
             font-weight: 300;
             line-height: 1.2em;
         }
+    }
+}
+
+.wp-block-contact-form-7-contact-form-selector .administrator-search__field {
+    &::before {
+        top: 8rem !important;
     }
 }

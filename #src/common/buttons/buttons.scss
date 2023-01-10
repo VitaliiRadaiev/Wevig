@@ -26,7 +26,7 @@
 
     &--light {
         color: #fff !important;
-        opacity: 1 !important;
+        opacity: 1;
 
         @media (min-width: 992px) {
             &:hover {
@@ -54,6 +54,7 @@
         background-color: $mainColor;
         color: #fff !important;
         opacity: 1 !important;
+        border: none;
 
         & svg path {
             transition: all .3s ease;

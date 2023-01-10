@@ -52,8 +52,13 @@
             margin-bottom: 0;
         }
         &.text-content {
-            font-size: 2.6rem;
-            line-height: 1.84em;
+            font-size: 2.8rem;
+            line-height: 1.71em;
+            color: #3f4f5f;
+
+            @media (max-width: $md3+px) {
+                font-size: 2.6rem;
+            }
 
             @media (max-width: $md4+px) {
                 font-size: 2.2rem;

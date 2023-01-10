@@ -55,13 +55,9 @@
         min-height: 55.4rem;
         padding-top: 7.9rem;
         padding-bottom: 9.6rem;
-        padding-left: 23.4rem;
+        padding-left: 22rem;
         display: flex;
         flex-direction: column;
-
-        @media (max-width: 1790px) {
-            padding-left: 12.4rem;
-        }
 
         @media (max-width: $md3+px) {
             padding-top: 19.3rem;
@@ -150,5 +146,12 @@
     }
 
     &__list {
+        &.container {
+            @media (min-width: 768px) {
+                max-width: 172rem !important;
+                padding-left: 6rem;
+                padding-right: 6rem;
+            }
+        }
     }
 }

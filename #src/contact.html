@@ -186,7 +186,7 @@
                                             <input type="checkbox">
                                             <div class="checkbox-radio__square"></div>
                                             <div class="checkbox-radio__text">
-                                                Ich akzeptiere die <a href="#">Datenschutzerklärung</a> der WEVIG!
+                                                Ich akzeptiere die <a href="#dataProtection" data-popup="open-popup">Datenschutzerklärung</a> der WEVIG!
                                             </div>
                                         </label>
                                     </div>
@@ -209,6 +209,8 @@
         <!-- == FOOTER ================== -->
         @@include('common/footer/_footer.html',{})
         <!-- == // FOOTER ================== -->
+
+        @@include('common/popup/_popup.html')
     </div>
     @@include('_js-bottom.html',{})
 </body>

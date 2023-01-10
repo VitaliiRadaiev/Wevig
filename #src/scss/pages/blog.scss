@@ -55,11 +55,7 @@
             top: 4.2rem;
 
             & .side-title {
-                width: 13rem;
-
-                & span {
-                    right: 6.5rem;
-                }
+                min-width: 13rem;
             }
         }
     }

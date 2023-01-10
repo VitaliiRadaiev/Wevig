@@ -24,6 +24,7 @@ class App {
 			}
 
 			this.utils.replaceToInlineSvg('.img-svg');
+			this.setFontSize();
 			this.dynamicAdapt.init();
 			this.headerHandler();
 			this.popupHandler();
@@ -43,7 +44,7 @@ class App {
 			
 			//this.setPaddingTopHeaderSize();
 			this.componentsAfterLoad();
-			//this.setFontSize();
+
 		});
 
 	}
@@ -240,11 +241,11 @@ class App {
 	}
 
 	setFontSize() {
-		let elements = document.querySelectorAll('[data-set-font-size]');
+		let elements = document.querySelectorAll('html');
 		if (elements.length) {
 			elements.forEach(el => {
 				const setFontSize = () => {
-					let value = 10 / 1400 * el.clientWidth;
+					let value = 10 / 1920 * el.clientWidth;
 					el.style.fontSize = value + 'px';
 				}
 
@@ -269,6 +270,8 @@ class App {
 	componentsBeforeLoad() {
 		@@include('../common/promo-header/promo-header.js');
 		@@include('../common/growup-btn/growup-btn.js');
+		@@include('../common/side-title/side-title.js');
+		@@include('../common/search-team-validation/search-team-validation.js');
 	}
 
 	componentsAfterLoad() {

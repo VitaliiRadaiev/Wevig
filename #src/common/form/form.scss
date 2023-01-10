@@ -93,6 +93,7 @@
     }
 
     &:focus {
+        border-color: $secondColor;
         &::placeholder {
             opacity: 0;
         }
@@ -128,6 +129,9 @@
         }
     }
 }
+
+
+
 
 .checkbox-radio {
     display: flex;
@@ -174,19 +178,95 @@
 
 
         & a {
-            color: $secondColor;
             position: relative;
             display: inline-block;
-        
+            line-height: 1.4em;
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
 
-            &:before {
-                position: absolute;
-                content: '';
-                left: 0;
-                bottom: 0.2em;
-                width: 100%;
-                height: 1px;
-                border-bottom: 0.5px dashed currentColor;
+            @media (min-width: 992px) {
+                &:hover {
+                    color: $secondColor;
+                }
+            }
+        }
+    }
+}
+
+.wpcf7-acceptance label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    & input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+
+        &:checked ~ {
+            & .wpcf7-list-item-label::before {
+                background-color: $mainColor;
+                border-color: $mainColor;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjk5OTk5OSA0LjYzNTg4TDIuNDc0NzEgNi4xMTA1OUMyLjg2NTIzIDYuNTAxMTEgMy40OTg0IDYuNTAxMTEgMy44ODg5MiA2LjExMDU5TDkgMC45OTk1MTIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==");
+            }
+        }
+    }
+
+    & .wpcf7-list-item-label::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        flex: 0 0 auto;
+        height: 4.4rem;
+        width: 4.4rem;
+        border: 1px solid $mainColor;
+        margin-right: 3.6rem;
+        background-position: center;
+        background-size: 85%;
+        background-repeat: no-repeat;
+        left: 0;
+
+        @media (max-width: $md3+px) {
+            margin-right: 2rem;
+        }
+    }
+
+    & .wpcf7-list-item-label::after {
+        display: none;
+    }
+
+    & .wpcf7-list-item-label {
+        font-size: 2.7rem;
+        line-height: 1.8em;
+        color: $mainColor;
+        font-weight: 300;
+        text-align: left;
+        position: relative;
+        padding-left: 8rem;
+        display: block;
+
+        @media (max-width: $md3+px) {
+            padding-left: 6rem;
+        }
+
+
+        & a {
+            position: relative;
+            display: inline-block;
+            line-height: 1.4em;
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    color: $secondColor;
+                }
             }
         }
     }

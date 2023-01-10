@@ -12,11 +12,7 @@
             top: 5rem;
 
             & .side-title {
-                width: 11rem;
-            }
-
-            & span {
-                right: 5.5rem;
+                min-width: 11rem;
             }
         }
     }
@@ -67,22 +63,29 @@
     &__quote-content {
         display: flex;
         flex-direction: column;
-        padding-top: 13rem;
+        padding-top: 22rem;
         padding-bottom: 7rem;
-        // justify-content: center;
         text-align: center;
         min-height: 62.2rem;
         color: #fff;
 
+
         @media (max-width: $md3+px) {
+            padding-top: 7rem;
             min-height: 60rem;
+            justify-content: center;
+        }
+
+        @media (max-width: $md4+px) {
+            padding-top: 7rem;
+            min-height: auto;
         }
     }
 
     &__quote-text {
         width: 100%;
         max-width: 131.1rem;
-        margin: 0 auto 4rem;
+        margin: 0 auto 2.2rem;
         font-size: 4rem;
         line-height: 1.7em;
 
@@ -92,6 +95,16 @@
             line-height: 2.3em;
         }
 
+        & a {
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0 bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+
+            &:hover {
+                color: $secondColor !important;
+            }
+        }
     }
 
     &__quote-logo {

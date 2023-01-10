@@ -5,6 +5,7 @@
 	<title>Wevig</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<style>
@@ -230,7 +231,7 @@ defer
                 <div class="team__head">
                     <div class="team__head-body container">
                         <h2 class="team__head-title">
-                            Hier finden Sie Ihre Verwalterin oder Ihren Verwalter
+                            <a href="#"> test</a>Hier finden Sie Ihre Verwalterin oder Ihren Verwalter
                         </h2>
                         <div class="team__head-subtitle">
                             Geben Sie hier Ihre Strasse und ihre Postleitzahl ein und drücken Sie anschließend auf „Suchen“.
@@ -241,8 +242,8 @@ defer
                     <div class="administrator-search__col-1">
                         <form action="/">
                             <div class="administrator-search__fields">
-                                <div class="administrator-search__field">
-                                    <input class="input" type="text" placeholder="Hier bitte Ihre PLZ (z.B.: 1150)" value="1140">
+                                <div class="administrator-search__field" data-mask="9999">
+                                    <input class="input" type="text" placeholder="Hier bitte Ihre PLZ (z.B.: 1150)" value="1140" required>
                                 </div>
                                 <div class="administrator-search__field">
                                     <input class="input" type="text" placeholder="Hier Ihre Straße (z.B.: Schüttelstrasse)" value="Schüttelstrasse">
@@ -257,6 +258,34 @@ defer
                         </form>
                     </div>
                     <div class="administrator-search__col-2">
+                        <div class="team-card">
+                            <div class="team-card__img ibg">
+                                <a href="#">
+                                    <img src="img/photo/team-img.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="team-card__body">
+                                <div class="team-card__position">Geschäftsführung</div>
+                                <div class="team-card__name">
+                                    <a href="#">
+                                        Mag. Bernhard Raffelsberger
+                                    </a>
+                                </div>
+                                <ul class="team-card__contact">
+                                    <li>
+                                        <a href="#">
+                                            Tel.: +43 1 486 06 08
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Email: bernhard.raffelsberger@wevig.at
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="team-card__link">V-Card</a>
+                            </div>
+                        </div>
                         <div class="team-card">
                             <div class="team-card__img ibg">
                                 <a href="#">

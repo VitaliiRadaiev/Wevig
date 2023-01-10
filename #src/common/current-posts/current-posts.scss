@@ -14,12 +14,9 @@
 
     &__body {
         display: flex;
-        gap: 94px;
+        gap: 9.4rem;
         min-width: 0;
 
-        @media (max-width: $xl1+px) { 
-            gap: 50px;
-        }
 
         @media (max-width: $md1+px) {
             padding-right: 10rem;
@@ -69,12 +66,7 @@
 
         @media (min-width: 992px) {
             &:hover {
-                transform: translateX(50px);
-            }
-        }
-        @media (min-width: 1568px) {
-            &:hover {
-                transform: translateX(80px);
+                transform: translateX(9.4rem);
             }
         }
 
@@ -123,29 +115,44 @@
 
         @media (min-width: 992px) {
             &:hover {
-                background-color: rgba(#fff, 0.2);
+                &::before {
+                    opacity: 1;
+                }
             }
+        }
+
+        &:before {
+            content: '';
+            width: 2.4rem;
+            height: 2.9rem;
+            background-color: #fff;
+            transition: all .3s ease;
+            opacity: 0.2;
+            clip-path: polygon(0 0, 0% 100%, 100% 50%);
         }
 
         & img {
             width: 100%;
             height: auto;
+            display: none;
         }
 
         &.prev {
-            left: -50px;
-            transform: translateY(-50%) scale(-1, 1);
+            left: -4.7rem;
+            transform: translateY(-50%) translateX(-50%) scale(-1, 1);
 
-            @media (max-width: $md1+px) {
-                left: -40px;
+            @media (max-width: $md3+px) {
+                left: -2.6rem;
             }
+
         }
 
         &.next {
-            right: -50px;
+            right: -4.7rem;
+            transform: translateY(-50%) translateX(50%);
 
-            @media (max-width: $md1+px) {
-                right: -40px;
+            @media (max-width: $md3+px) {
+                right: -2.6rem;
             }
         }
 

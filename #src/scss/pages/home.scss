@@ -39,10 +39,32 @@
         font-size: 2.8rem;
         line-height: 1em;
         margin-bottom: 1.5rem;
+
+        & a {
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+    
+            &:hover {
+                color: $secondColor !important;
+            }
+        }
     }
 
     &__title {
         margin-bottom: 4rem;
+
+        & a {
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+    
+            &:hover {
+                color: $secondColor !important;
+            }
+        }
     }
 
     &__text {
@@ -55,6 +77,17 @@
 
         @media (max-width: $md3+px) {
             max-width: none;
+        }
+
+        & a {
+            background-image: linear-gradient(to right, $secondColor 50%, transparent 50%);
+            background-position: left 0  bottom 0;
+            background-repeat: repeat-x;
+            background-size: 5px 0.5px;
+    
+            &:hover {
+                color: $secondColor !important;
+            }
         }
     }
 
@@ -400,7 +433,8 @@
 
     &__list-text {
         font-size: 2rem;
-        line-height: 1.2em;
+        line-height: 1.5em;
+        letter-spacing: 0.01em;
         color: $secondColor;
         transition: all .3s ease;
         padding-right: 1rem;
@@ -428,13 +462,13 @@
     }
     &__body {
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(4, 1fr);
         gap: 10rem;
         justify-content: center;
 
 
         @media (max-width: $md2+px) {
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(2, 1fr);
         }
 
         &.container-second {

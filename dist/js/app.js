@@ -371,6 +371,7 @@ class App {
 			}
 
 			this.utils.replaceToInlineSvg('.img-svg');
+			this.setFontSize();
 			this.dynamicAdapt.init();
 			this.headerHandler();
 			this.popupHandler();
@@ -390,7 +391,7 @@ class App {
 			
 			//this.setPaddingTopHeaderSize();
 			this.componentsAfterLoad();
-			//this.setFontSize();
+
 		});
 
 	}
@@ -1145,11 +1146,11 @@ if(teamListSlider) {
 	}
 
 	setFontSize() {
-		let elements = document.querySelectorAll('[data-set-font-size]');
+		let elements = document.querySelectorAll('html');
 		if (elements.length) {
 			elements.forEach(el => {
 				const setFontSize = () => {
-					let value = 10 / 1400 * el.clientWidth;
+					let value = 10 / 1920 * el.clientWidth;
 					el.style.fontSize = value + 'px';
 				}
 
@@ -1176,20 +1177,13 @@ if(teamListSlider) {
 if (promoHeader) {
     let promoBg = document.querySelector('.promo-header__bg');
     if (promoBg) {
-        // const setBgWidth = () => {
-        //     let width = ((promoBg.clientHeight + 200) / 100 * 177.77);
-        //     if (width > document.documentElement.clientWidth) {
-        //         promoBg.style.width = width + 'px';
-        //         promoBg.style.height = 'calc(100% + 100px)';
-        //     } else {
-        //         promoBg.style.width = 'calc(100% + 100px)';
-        //         promoBg.style.height = (document.documentElement.clientWidth / 100 * 56.25) + 'px';
-        //     }
-        // }
+        setCoverVideoIframe(promoBg, promoHeader, { desk: { w: 16, h: 9 }, mob: { w: 555, h: 700 } });
 
-        // setBgWidth();
-        // window.addEventListener('resize', setBgWidth);
-        setCoverVideoIframe(promoBg, promoHeader, {desk: {w: 16, h: 9}, mob: {w:555, h: 700}});
+        window.addEventListener('scroll', (e) => {
+            if(document.documentElement.clientWidth < 768) {
+                promoBg.style.transform = `translate3d(0px, ${window.pageYOffset * 0.25}px, 0px)`
+            }
+        })
     }
 
     let bgImages = Array.from(promoHeader.querySelectorAll('.promo-header__bg-layer img'));
@@ -1199,50 +1193,59 @@ if (promoHeader) {
             easing: 'easeOutQuad',
             autoplay: false,
         })
-            .add({
-                targets: '.promo-header__bg-layer--3 img',
-                scale: [1.6, 1],
-                translateY: ['100%', '0%'],
-                duration: 1500,
-                delay: 0,
-            })
-            .add({
-                targets: '.promo-header__bg-layer--2 img',
-                scale: [1.6, 1],
-                translateY: ['100%', '0%'],
-                duration: 700,
-                delay: 0,
-            })
-            .add({
-                targets: '.promo-header__bg-layer--5 img',
-                translateX: ['200%', '0%'],
-                opacity: [0, 1],
-                duration: 800,
-                delay: 0,
-            })
-            .add({
-                targets: ['.promo-header__title', '.promo-header__subtitle'],
-                translateY: ['100%', '0%'],
-                opacity: [0, 1],
-                duration: 400,
-                delay: (el, i) => 200 * i,
-            })
-            .add({
-                targets: '.header__logo',
-                translateY: ['-100%', '0%'],
-                opacity: [0, 1],
-                duration: 400,
-                delay: 0,
-            })
-            .add({
-                targets: [...document.querySelectorAll('.header__menu .menu__list li'), '.header__btn', '.header__burger '],
-                translateY: ['-100%', '0%'],
-                opacity: [0, 1],
-                duration: 300,
-                delay: (el, i) => 40 * (i + 1),
-            })
+        .add({
+            targets: ['.promo-header__title', '.promo-header__subtitle'],
+            translateY: ['100%', '0%'],
+            opacity: [0, 1],
+            duration: 400,
+            delay: (el, i) => 200 * i,
+        })
+        .add({
+            targets: '.header__logo',
+            translateY: ['-100%', '0%'],
+            opacity: [0, 1],
+            duration: 400,
+            delay: 0,
+        })
+        .add({
+            targets: [...document.querySelectorAll('.header__menu .menu__list li'), '.header__btn', '.header__burger '],
+            translateY: ['-100%', '0%'],
+            opacity: [0, 1],
+            duration: 300,
+            delay: (el, i) => 40 * (i + 1),
+        });
 
-            promoHeader.classList.add('spiner');
+        let animBg = anime.timeline({
+            easing: 'easeOutQuad',
+            autoplay: false,
+        })
+        .add({
+            targets: '.promo-header__bg-layer--3 img',
+            scale: [1.6, 1],
+            translateY: ['100%', '0%'],
+            duration: 1500,
+            delay: 0,
+        })
+        .add({
+            targets: '.promo-header__bg-layer--2 img',
+            scale: [1.6, 1],
+            translateY: ['100%', '0%'],
+            duration: 700,
+            delay: 0,
+        })
+        // .add({
+        //     targets: '.promo-header__bg-layer--5 img',
+        //     translateX: ['200%', '0%'],
+        //     opacity: [0, 1],
+        //     duration: 800,
+        //     delay: 0,
+        // });
+
+        promoHeader.classList.add('spiner');
+
+        setTimeout(() => {
+            anim.play();
+        }, 1000)
 
         let wrappedImagesByPromise = bgImages.map(img => {
             return new Promise(resolve => {
@@ -1257,8 +1260,7 @@ if (promoHeader) {
             .then(data => {
                 promoHeader.classList.remove('spiner');
                 promoHeader.classList.add('loaded');
-
-                anim.play();
+                animBg.play();
             });
     }
 }
@@ -1274,7 +1276,7 @@ function setCoverVideoIframe(iframe, parent, size) {
             iframe.style.width = 'calc(100% + 18%)';
             iframe.style.height = (parent.clientWidth / 100 * percentHeight) + ((parent.clientWidth / 100 * percentHeight) * 0.18) + 'px';
         } else {
-            iframe.style.width = (parent.clientHeight / 100 * percentWidth) + ((parent.clientWidth / 100 * percentHeight) * 0.18)  + 'px';
+            iframe.style.width = (parent.clientHeight / 100 * percentWidth) + ((parent.clientHeight / 100 * percentWidth) * 0.18) + 'px';
             iframe.style.height = 'calc(100% + 18%)';
         }
     }
@@ -1300,6 +1302,103 @@ function setCoverVideoIframe(iframe, parent, size) {
         
         window.addEventListener('scroll', () => {
             btn.classList.toggle('btn-growup--hide', window.pageYOffset < document.documentElement.clientHeight / 2);
+        })
+    }
+};
+		// {
+//     let sideTitle = document.querySelector('.side-title');
+//     if(sideTitle) {
+//         let text = sideTitle.querySelector('span');
+//         if(text) {
+//             const setWidth = () => {
+//                 text.style.width = sideTitle.clientHeight + 'px';
+//             }
+
+//             setWidth();
+
+//             window.addEventListener('resize', setWidth);
+//         }
+//     }
+// };
+		window.searchAdministratorFormValidationText = {
+    required: 'Bitte füllen Sie dieses Feld aus',
+    minValue: 'Min value should be 4 digits'
+}
+
+class InputObj {
+    constructor(input, mask = null) {
+        this.input = input;
+        this.mask = mask;
+        this.errorMessages = {
+            required: this._createErrorMessageEl(window.searchAdministratorFormValidationText.required),
+            minValue: this._createErrorMessageEl(window.searchAdministratorFormValidationText.minValue),
+        }
+
+        this.init();
+        this._focus(); 
+    }
+    init() {
+        if(this.mask) {
+            Inputmask({
+                regex: this.mask,
+                showMaskOnHover: false,
+                showMaskOnFocus: false,
+                clearIncomplete: true,
+                clearMaskOnLostFocus: true,
+            }).mask(this.input);
+        }
+    }
+    _createErrorMessageEl(text) {
+        let errorMessage = document.createElement('div');
+        errorMessage.className = 'wpcf7-not-valid-tip';
+        errorMessage.innerText = text;
+        return errorMessage;
+    }
+
+    _focus() {
+        this.input.addEventListener('focus', () => {
+            this.errorMessages.required.remove();
+            this.errorMessages.minValue.remove();
+            this.input.classList.remove('wpcf7-not-valid');
+        })
+    }
+
+    checkRequired() {
+        if (this.input.value.trim()) {
+            this.errorMessages.required.remove();
+            this.input.classList.remove('wpcf7-not-valid');
+        } else {
+            this.input.after(this.errorMessages.required);
+            this.input.classList.add('wpcf7-not-valid');
+        }
+    }
+
+    checkMinValue(length) {
+        if(this.input.value.trim().length && this.input.value.trim().replace(/_/g, '').length < length) {
+            this.input.after(this.errorMessages.minValue);
+            this.input.classList.add('wpcf7-not-valid');
+        }
+    }
+}
+
+{
+
+    let searchAdministratorForm = document.querySelector(".administrator-search form");
+    if (searchAdministratorForm) {
+        let searchBtn = searchAdministratorForm.querySelector('button.ajax-team');
+        let plzInput = searchAdministratorForm.querySelector('input.plz-ajax');
+        let strabeInput = searchAdministratorForm.querySelector('input.strabe-ajax');
+
+        let inputs = [new InputObj(plzInput, String.raw`[0-9]{4}`), new InputObj(strabeInput, String.raw`[0-9ÄäÖöÜüß\.A-Za-z\s'/\-]*`)];
+
+        searchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            inputs.forEach(inputObj => {
+                inputObj.checkRequired();
+            })
+
+            inputs[0].checkMinValue(4);
         })
     }
 };

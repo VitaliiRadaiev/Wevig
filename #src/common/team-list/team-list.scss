@@ -1,4 +1,10 @@
 .team-list {
+    position: relative;
+    & .current-posts__slider-btn  {
+        &::before {
+            background-color: $secondColor;
+        }
+    }
     @media (min-width: 768px) {
         &.container {
             max-width: 160rem !important; 
@@ -12,11 +18,17 @@
         & .swiper-slide {
             width: auto;
             height: auto;
-            flex: 0 1 calc(33.3333333% - (11.5rem * 2 / 3));
+            flex: 0 1 calc(50% - (11.5rem / 2));
         }
 
         & .current-posts__slider-btn {
             display: none;
+        }
+    }
+
+    @media (min-width: 992px) {
+        & .swiper-slide {
+            flex: 0 1 calc(33.3333333% - (11.5rem * 2 / 3));
         }
     }
 
@@ -34,18 +46,10 @@
             top: 54%;
             &.prev {
 
-                left: -7.3rem;
-
-                @media (max-width: $md4+px) {
-                    left: -2.3rem;
-                }
+                left: 2rem;
             }
             &.next {
-                right: -7.3rem;
-
-                @media (max-width: $md4+px) {
-                    right: -2.3rem;
-                }
+                right: 2rem;
             }
         }
     }

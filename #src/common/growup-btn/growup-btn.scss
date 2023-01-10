@@ -4,27 +4,38 @@
     border-radius: 0;
     border: none;
     width: 6rem;
+    height: 6rem;
     cursor: pointer;
     position: fixed;
-    right: 1rem;
-    bottom: 5rem;
+    right: 1.8rem;
+    bottom: 1.6rem;
     z-index: 50;
     padding: 0;
     transition: opacity .6s ease, color .3s ease;
     color: $textColor;
     opacity: 0;
     visibility: hidden;
+    background-color: $secondColor;
+    transition: all .3s ease;
 
     @media (min-width: 992px) {
         &:hover {
             color: $mainColor;
         }
     }
-    
-    @media (max-width: $md3+px) {
-        bottom: 20px;
-        width: 40px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3.9rem;
+        height: 2.5rem;
+        background-color: #fff;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
+    
 
     & svg {
         width: 100%;
@@ -32,6 +43,7 @@
         border: 2px solid #fff;
         border-radius: 50%;
         background-color: #fff;
+        display: none;
 
         & path {
             fill: currentColor;
@@ -39,8 +51,14 @@
     }
 
     &--show {
-        opacity: 1;
+        opacity: 0.3;
         visibility: visible;
+
+        @media (min-width: 992px) {
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 
     &--hide {

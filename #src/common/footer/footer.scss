@@ -33,6 +33,10 @@
             &.container-second {
                 padding-right: 0;
                 max-width: 169rem !important;
+
+                @media (max-width: $md2+px) {
+                    padding-right: 4rem;
+                }
             }
         }
     }
@@ -58,6 +62,10 @@
             &.container-second {
                 padding-right: 0;
                 max-width: 169rem !important;
+
+                @media (max-width: $md2+px) {
+                    padding-right: 4rem;
+                }
             }
         }
     }
@@ -86,6 +94,10 @@
             &.container-second {
                 padding-right: 0;
                 max-width: 160rem !important;
+
+                @media (max-width: $md2+px) {
+                    padding-right: 4rem;
+                }
             }
         }
     }
@@ -181,9 +193,16 @@
 
     &__btn {
         &.btn-default {
-            border-color: $secondColor;
             font-size: 2rem;
             padding: 0.4em 1em;
+            border-color: $secondColor;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    border-color: rgba(#fff, 0.5);
+                    color: $secondColor !important;
+                }
+            }
 
             @media (min-width: 768px) {
                 min-height: 3.7em;

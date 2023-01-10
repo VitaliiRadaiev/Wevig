@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-@@include('_head.html',{
-"title": "Wevig"
-})
-
-<body>
-    <div class="_preload-body"></div>
-    <!-- == TOP LINE ================== -->
-    <div class="main-wrapper">
-        @@include('common/header/_header.html',{
-        "mod": "header--dark"
-        })
-        <!-- == // TOP LINE ================== -->
-
-        <main class="_page info-page">
-            <div class="data-padding-top-header-size"></div>
-
+<div class="popup" id="dataProtection">
+    <div class="popup__close" data-popup="close-popup"><span></span></div>
+	<div class="popup__body">
+		<div class="popup__content">
             <section class="info">
                 <div class="info__title side-title-wrap">
                     <div class="side-title-body container">
@@ -57,14 +43,6 @@
                     </div>
                 </div>
             </section>
-
-        </main>
-
-        <!-- == FOOTER ================== -->
-        @@include('common/footer/_footer.html',{})
-        <!-- == // FOOTER ================== -->
-    </div>
-    @@include('_js-bottom.html',{})
-</body>
-
-</html>
+		</div>
+	</div>
+</div>
